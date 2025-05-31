@@ -1,11 +1,15 @@
+const logger = require('../utils/logger');
+
 const generateMealPlanPrompt = (userData) => {
-  return {
+  logger.info('Generating meal plan prompt', { name: userData.name });
+  
+  const prompt = {
     system: `You are a certified clinical dietitian with 10+ years of experience creating personalized meal plans.
 Always produce output strictly in valid JSON following the schema provided.
 Adhere to specified calorie targets, macronutrient splits, cultural preferences, and allergen exclusions.
 Include for each meal:
 - name
-• ingredient list
+• ingredients (as a comma-separated string)
 • total_calories
 • macros: { protein_g, carbs_g, fats_g, fiber_g, sugars_g, water_ml }
 • micros_vitamins: {
@@ -71,6 +75,13 @@ JSON OUTPUT SCHEMA:
   ]
 }`
   };
+  
+  logger.debug('Generated prompt:', { 
+    systemLength: prompt.system.length,
+    userLength: prompt.user.length
+  });
+  
+  return prompt;
 };
 
-module.exports = { generateMealPlanPrompt }; 
+module.exports = { generateMealPlanPrompt };

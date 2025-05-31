@@ -1,19 +1,11 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../Database/models/postgres/connection');
+const sequelize = require('./connection');
 
 const MealPlan = sequelize.define('MealPlan', {
   id: {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
     primaryKey: true
-  },
-  userId: {
-    type: DataTypes.UUID,
-    allowNull: false,
-    references: {
-      model: 'users',
-      key: 'id'
-    }
   },
   planData: {
     type: DataTypes.JSONB,
@@ -30,15 +22,18 @@ const MealPlan = sequelize.define('MealPlan', {
   status: {
     type: DataTypes.ENUM('active', 'completed', 'cancelled'),
     defaultValue: 'active'
-  },
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW
-  },
-  updatedAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW
   }
+}, {
+  tableName: 'meal_plans',
+  timestamps: true,
+  indexes: [
+    {
+      fields: ['status']
+    },
+    {
+      fields: ['startDate', 'endDate']
+    }
+  ]
 });
 
 module.exports = MealPlan; 
