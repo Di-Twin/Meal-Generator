@@ -138,7 +138,6 @@ The API uses standard HTTP status codes and returns error responses in the follo
 
 ## Security
 
-- All API endpoints are protected with authentication
 - Environment variables are used for sensitive configuration
 - Input validation is performed on all requests
 - Rate limiting is implemented to prevent abuse
@@ -158,6 +157,3 @@ Logs are written to:
 4. Push to the branch
 5. Create a Pull Request
 
-## License
-
-This project is licensed under the MIT License.
