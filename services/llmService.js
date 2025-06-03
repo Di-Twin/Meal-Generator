@@ -3,7 +3,7 @@ const logger = require('../utils/logger');
 
 const openai = new OpenAI({
   baseURL: 'https://api.together.xyz/v1',
-  apiKey: "5a67b7551e6fe020223add854509664130001611525b2a175ab1797e29964a58",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 class LLMService {
