@@ -96,29 +96,14 @@ class NutritionController {
     async clearNutritionCache(req, res) {
         try {
             const { foodDescription } = req.body;
+            await nutritionCache.clear(foodDescription);
             
-            if (foodDescription) {
-                // Clear specific entry
-                const key = nutritionCache.getKey(foodDescription);
-                nutritionCache.cache.del(key);
-                await Nutrition.destroy({
-                    where: { normalizedDescription: key }
-                });
-                
-                return res.status(200).json({
-                    success: true,
-                    message: `Cache cleared for: ${foodDescription}`
-                });
-            } else {
-                // Clear all cache
-                nutritionCache.cache.flushAll();
-                await Nutrition.destroy({ where: {} });
-                
-                return res.status(200).json({
-                    success: true,
-                    message: 'All nutrition cache cleared'
-                });
-            }
+            return res.status(200).json({
+                success: true,
+                message: foodDescription 
+                    ? `Cache cleared for: ${foodDescription}`
+                    : 'All nutrition cache cleared'
+            });
         } catch (error) {
             console.error('Error clearing cache:', error);
             return res.status(500).json({

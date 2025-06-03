@@ -137,4 +137,6 @@ describe('Dummy Data Service', () => {
       expect(localStorage.getItem).toHaveBeenCalledWith('dummyMealPlans');
     });
   });
-}); 
+});
+
+// TEST-ONLY: This test is for development and should not be included in production builds.

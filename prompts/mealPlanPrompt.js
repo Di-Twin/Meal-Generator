@@ -1,79 +1,135 @@
 const logger = require('../utils/logger');
 
 const generateMealPlanPrompt = (userData) => {
-  logger.info('Generating meal plan prompt', { name: userData.name });
+  const {
+    name,
+    age,
+    gender,
+    height,
+    weight,
+    activity,
+    goal,
+    dailyCalories,
+    macroTargets,
+    allergies,
+    avoid,
+    cuisinePreference,
+    numberOfDays = 1
+  } = userData;
+
+  logger.info('Generating meal plan prompt', { name: name });
   
   const prompt = {
-    system: `You are a certified clinical dietitian with 10+ years of experience creating personalized meal plans.
-Always produce output strictly in valid JSON following the schema provided.
-Adhere to specified calorie targets, macronutrient splits, cultural preferences, and allergen exclusions.
-Include for each meal:
-- name
-• ingredients (as a comma-separated string)
-• total_calories
-• macros: { protein_g, carbs_g, fats_g, fiber_g, sugars_g, water_ml }
-• micros_vitamins: {
-  vitamin_A_mcg, vitamin_B1_mg, vitamin_B2_mg, vitamin_B3_mg,
-  vitamin_B5_mg, vitamin_B6_mg, vitamin_B7_mcg, vitamin_B9_mcg,
-  vitamin_B12_mcg, vitamin_C_mg, vitamin_D_mcg,
-  vitamin_E_mg, vitamin_K_mcg
-}
-• micros_minerals: {
-  calcium_mg, iron_mg, magnesium_mg, potassium_mg,
-  sodium_mg, zinc_mg, phosphorus_mg, copper_mg,
-  selenium_mcg, manganese_mg, iodine_mcg
-}
-At the end of each day, include:
-• total_day_calories
-• daily_macros: same fields as above
-• daily_micros_vitamins: same fields as above
-• daily_micros_minerals: same fields as above
-Any deviation from this schema or missing nutrient fields is an error.`,
-    user: `Generate a 3‑day meal plan for the following user:
-Name: ${userData.name}
-Age: ${userData.age}, Gender: ${userData.gender}
-Height: ${userData.height} cm, Weight: ${userData.weight} kg
-Activity: ${userData.activity}
-Goal: ${userData.goal}
-Daily Calories: ${userData.dailyCalories} kcal
-Macro Split: ${userData.macroSplit}
-Cuisine Preference: ${userData.cuisinePreference}
-Allergies: ${userData.allergies.join(', ')}
-Avoid: ${userData.avoid.join(', ')}
+    system: `You are a professional nutritionist and chef specializing in ${cuisinePreference} cuisine. Create a detailed meal plan that meets the following requirements:
 
-Return for each day:
-Breakfast, Lunch, Dinner, Snack
-For each meal, include all macros and micronutrients as specified above.
-At the end of each day, summarize totals for calories, macros, vitamins, and minerals.
-Output must strictly follow the JSON schema below.
+1. Daily Calorie Target: ${dailyCalories} calories (MUST BE EXACT)
+2. Macro Split (MUST BE EXACT):
+   - Carbs: ${macroTargets.carbs_g}g (${Math.round((macroTargets.carbs_g * 4 / dailyCalories) * 100)}% of calories)
+   - Protein: ${macroTargets.protein_g}g (${Math.round((macroTargets.protein_g * 4 / dailyCalories) * 100)}% of calories)
+   - Fats: ${macroTargets.fats_g}g (${Math.round((macroTargets.fats_g * 9 / dailyCalories) * 100)}% of calories)
 
-JSON OUTPUT SCHEMA:
+3. Dietary Restrictions:
+   - Allergies: ${allergies.join(', ') || 'None'}
+   - Foods to Avoid: ${avoid.join(', ') || 'None'}
+
+4. Meal Structure (MUST FOLLOW EXACTLY):
+   - Breakfast: 25-30% of daily calories (${Math.round(dailyCalories * 0.25)}-${Math.round(dailyCalories * 0.35)} calories)
+   - Lunch: 30-35% of daily calories (${Math.round(dailyCalories * 0.30)}-${Math.round(dailyCalories * 0.30)} calories)
+   - Dinner: 30-35% of daily calories (${Math.round(dailyCalories * 0.20)}-${Math.round(dailyCalories * 0.25)} calories)
+   - Snack: 10-15% of daily calories (${Math.round(dailyCalories * 0.10)}-${Math.round(dailyCalories * 0.15)} calories)
+
+5. Cuisine Preference: ${cuisinePreference}
+
+6. Health Goals: ${goal}
+
+CRITICAL REQUIREMENTS:
+1. Total daily calories MUST equal exactly ${dailyCalories}
+2. Macro split MUST match exactly: ${macroTargets.carbs_g}g carbs, ${macroTargets.protein_g}g protein, ${macroTargets.fats_g}g fat
+3. Each meal's calories MUST fall within its specified range
+4. All meals MUST be ${cuisinePreference} style
+5. NO ingredients from allergies or avoid lists
+6. All nutrition values MUST be positive numbers
+
+IMPORTANT: You must respond with a JSON object in the following exact structure:
 {
   "days": [
     {
       "day": "Day 1",
       "meals": {
-        "breakfast": { /* includes all macro & micro fields */ },
-        "lunch": { /* ... */ },
-        "dinner": { /* ... */ },
-        "snack": { /* ... */ }
+        "breakfast": {
+          "name": "string",
+          "description": "string",
+          "ingredients": "string (comma-separated with quantities)",
+          "estimated_calories": number,
+          "nutrition": {
+            "calories": number,
+            "macros": {
+              "protein_g": number,
+              "carbs_g": number,
+              "fats_g": number,
+              "fiber_g": number,
+              "sugars_g": number
+            },
+            "vitamins": {
+              "vitamin_A_mcg": number,
+              "vitamin_C_mg": number
+            },
+            "minerals": {
+              "calcium_mg": number,
+              "iron_mg": number,
+              "potassium_mg": number,
+              "sodium_mg": number
+            }
+          }
+        },
+        "lunch": { /* same structure as breakfast */ },
+        "dinner": { /* same structure as breakfast */ },
+        "snack": { /* same structure as breakfast */ }
       },
       "total_day_calories": number,
-      "daily_macros": {
-        "protein_g": number, "carbs_g": number, "fats_g": number,
-        "fiber_g": number, "sugars_g": number, "water_ml": number
+      "daily_nutrition": {
+        "calories": number,
+        "macros": {
+          "protein_g": number,
+          "carbs_g": number,
+          "fats_g": number,
+          "fiber_g": number,
+          "sugars_g": number
+        },
+        "vitamins": {
+          "vitamin_A_mcg": number,
+          "vitamin_C_mg": number
+        },
+        "minerals": {
+          "calcium_mg": number,
+          "iron_mg": number,
+          "potassium_mg": number,
+          "sodium_mg": number
+        }
       },
-      "daily_micros_vitamins": {
-        "vitamin_A_mcg": number, "vitamin_B1_mg": number, /* ... */ "vitamin_K_mcg": number
-      },
-      "daily_micros_minerals": {
-        "calcium_mg": number, "iron_mg": number, /* ... */ "iodine_mcg": number
-      }
-    },
-    { "day": "Day 2", /* ... */ },
-    { "day": "Day 3", /* ... */ }
+      "summary": "string"
+    }
   ]
-}`
+}
+
+Before returning the response, verify that:
+1. Total calories = ${dailyCalories}
+2. Total macros match exactly: ${macroTargets.carbs_g}g carbs, ${macroTargets.protein_g}g protein, ${macroTargets.fats_g}g fat
+3. Each meal's calories are within their specified ranges
+4. All meals are ${cuisinePreference} style
+5. No restricted ingredients are used`,
+    user: `Create a ${numberOfDays}-day meal plan for:
+Name: ${name}
+Age: ${age}
+Gender: ${gender}
+Height: ${height} cm
+Weight: ${weight} kg
+Activity Level: ${activity}
+Goal: ${goal}
+Daily Calories: ${dailyCalories}
+Cuisine Preference: ${cuisinePreference}
+
+The meal plan must be in ${cuisinePreference} style and strictly follow the macro split and calorie requirements.`
   };
   
   logger.debug('Generated prompt:', { 

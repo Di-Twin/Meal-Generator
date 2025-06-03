@@ -1,262 +1,387 @@
 const axios = require('axios');
-const logger = require('../utils/logger');
-const fatSecretLimiter = require('../utils/rateLimiter');
-const nutritionCache = require('../utils/nutritionCache');
 const config = require('../config');
+const logger = require('../utils/logger');
+const nutritionCache = require('../utils/nutritionCache');
+const NutritionDataStandardizer = require('../utils/nutritionDataStandardizer');
 
 class FatSecretService {
     constructor() {
-        this.baseURL = 'https://platform.fatsecret.com/rest';
-        this.tokenURL = 'https://oauth.fatsecret.com/connect/token';
-        this.clientId = config.fatSecret.clientId;
-        this.clientSecret = config.fatSecret.clientSecret;
+        this.baseUrl = 'https://platform.fatsecret.com/rest/server.api';
+        this.tokenUrl = 'https://oauth.fatsecret.com/connect/token';
+        this.clientId = config.fatsecret.clientId;
+        this.clientSecret = config.fatsecret.clientSecret;
         this.accessToken = null;
         this.tokenExpiry = null;
-        this.tokenRefreshTimeout = null;
-        this.retryAttempts = 3;
-        this.retryDelay = 1000; // 1 second
-
-        logger.info('FatSecretService initialized with client ID:', { 
-            clientId: this.clientId.substring(0, 4) + '...' 
-        });
+        
+        if (!this.clientId || !this.clientSecret) {
+            logger.warn('FatSecret credentials not configured. API features will be disabled.');
+        }
     }
 
     async verifyConnection() {
         try {
-            logger.info('Verifying FatSecret API connection...');
-            
-            // Test meal for verification
-            const testMeal = {
-                name: "Grilled Chicken Salad",
-                ingredients: "chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil"
-            };
-
-            const nutritionData = await this.getMealNutritionData(testMeal);
-            
-            if (nutritionData) {
-                logger.info('FatSecret API connection verified successfully:', {
-                    mealName: nutritionData.mealName,
-                    calories: nutritionData.nutrition.calories
-                });
-                return true;
-            } else {
-                logger.error('FatSecret API verification failed: No nutrition data received');
-                return false;
+            if (!this.clientId || !this.clientSecret) {
+                throw new Error('FatSecret API credentials not configured');
             }
-        } catch (error) {
-            logger.error('FatSecret API verification failed:', {
-                error: error.message,
-                status: error.response?.status,
-                data: error.response?.data
+
+            // First verify we can get an access token
+            const token = await this.getAccessToken();
+            if (!token) {
+                throw new Error('Failed to obtain access token');
+            }
+
+            // Make a test API call to search for "apple"
+            const searchResponse = await this.searchFood('apple');
+            if (!searchResponse?.foods_search?.results?.food?.length) {
+                throw new Error('Invalid search response');
+            }
+
+            // Get detailed nutrition data for the first food item
+            const foodId = searchResponse.foods_search.results.food[0].food_id;
+            const foodData = await this.getFoodNutrition(foodId);
+            
+            if (!foodData?.food) {
+                throw new Error('Invalid food data response');
+            }
+
+            // Standardize the nutrition data
+            const standardizedData = NutritionDataStandardizer.standardizeNutritionData(foodData, 'fatsecret');
+            
+            // Verify we got valid nutrition data
+            if (!standardizedData || !standardizedData.calories) {
+                throw new Error('No valid nutrition values found');
+            }
+
+            logger.info('FatSecret API verification successful', {
+                food_name: standardizedData.food_name,
+                calories: standardizedData.calories
             });
+
+            return true;
+        } catch (error) {
+            logger.error('FatSecret API verification failed:', { error: error.message });
             return false;
         }
     }
 
     async getAccessToken() {
-        try {
-            // Check if we have a valid token
-            if (this.accessToken && this.tokenExpiry && Date.now() < this.tokenExpiry - 300000) { // 5 minutes buffer
+        if (this.accessToken && this.tokenExpiry && Date.now() < this.tokenExpiry) {
                 return this.accessToken;
             }
 
-            logger.info('Requesting new FatSecret access token');
-            
-            // Log request details (excluding sensitive data)
-            logger.debug('Token request details:', {
-                url: this.tokenURL,
-                grantType: 'client_credentials',
-                scope: 'basic nlp', // Changed from 'food.nlp' to 'basic nlp'
-                clientIdPrefix: this.clientId.substring(0, 4) + '...'
-            });
+        if (!this.clientId || !this.clientSecret) {
+            throw new Error('FatSecret credentials not configured');
+        }
 
+        try {
             const response = await axios.post(
-                this.tokenURL,
-                'grant_type=client_credentials&scope=basic nlp', // Changed from 'food.nlp' to 'basic nlp'
+                this.tokenUrl,
+                new URLSearchParams({
+                    grant_type: 'client_credentials',
+                    client_id: this.clientId,
+                    client_secret: this.clientSecret,
+                    scope: 'premier'
+                }).toString(),
                 {
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    auth: {
-                        username: this.clientId,
-                        password: this.clientSecret
                     }
                 }
             );
 
-            if (!response.data.access_token) {
-                throw new Error('No access token in response');
+            logger.debug('FatSecret token response:', response.data);
+
+            if (response.status === 200 && response.data.access_token) {
+                this.accessToken = response.data.access_token;
+                this.tokenExpiry = Date.now() + (response.data.expires_in * 1000);
+                return this.accessToken;
             }
 
-            this.accessToken = response.data.access_token;
-            this.tokenExpiry = Date.now() + (response.data.expires_in * 1000);
-            
-            // Schedule token refresh
-            this.scheduleTokenRefresh(response.data.expires_in);
-            
-            logger.info('Successfully obtained FatSecret access token');
-            return this.accessToken;
+            throw new Error('Failed to obtain access token: Invalid response');
         } catch (error) {
-            // Enhanced error logging
-            const errorDetails = {
-                message: error.message,
+            if (error.response?.status === 401) {
+                throw new Error('Invalid FatSecret credentials');
+            }
+            logger.error('Token request failed:', {
                 status: error.response?.status,
                 data: error.response?.data,
-                clientIdPrefix: this.clientId ? this.clientId.substring(0, 4) + '...' : 'not set'
-            };
-
-            if (error.response?.status === 400) {
-                if (error.response?.data?.error === 'invalid_client') {
-                    logger.error('Invalid FatSecret client credentials:', errorDetails);
-                    throw new Error('Invalid FatSecret client credentials. Please check your FATSECRET_CLIENT_ID and FATSECRET_CLIENT_SECRET');
-                } else if (error.response?.data?.error === 'invalid_scope') {
-                    logger.error('Invalid FatSecret scope:', errorDetails);
-                    throw new Error('Invalid FatSecret scope. Please check the API documentation for correct scope format.');
-                }
-            }
-
-            logger.error('Error getting FatSecret access token:', errorDetails);
-            throw new Error('Failed to authenticate with FatSecret API');
+                message: error.message
+            });
+            throw new Error(`Failed to obtain access token: ${error.message}`);
         }
     }
 
-    scheduleTokenRefresh(expiresIn) {
-        // Clear any existing refresh timeout
-        if (this.tokenRefreshTimeout) {
-            clearTimeout(this.tokenRefreshTimeout);
-        }
+    async searchFood(query) {
+        try {
+            const token = await this.getAccessToken();
+            const response = await fetch(this.baseUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: new URLSearchParams({
+                    method: 'foods.search.v3',
+                    format: 'json',
+                    search_expression: query,
+                    max_results: 1
+                })
+            });
 
-        // Schedule refresh 5 minutes before expiry
-        const refreshTime = (expiresIn - 300) * 1000; // Convert to milliseconds
-        this.tokenRefreshTimeout = setTimeout(async () => {
-            try {
-                logger.info('Refreshing FatSecret access token before expiry');
-                await this.getAccessToken();
-            } catch (error) {
-                logger.error('Failed to refresh token:', error);
-                // Retry after a delay
-                setTimeout(() => this.scheduleTokenRefresh(expiresIn), 60000);
+            if (!response.ok) {
+                throw new Error(`API request failed with status ${response.status}`);
             }
-        }, refreshTime);
+
+            const data = await response.json();
+            if (!data?.foods_search?.results?.food) {
+                throw new Error('Invalid search response format');
+            }
+
+            return data;
+        } catch (error) {
+            logger.error('Error searching FatSecret API:', { error: error.message });
+            throw error;
+        }
+    }
+
+    async getFoodNutrition(foodId) {
+        try {
+            const token = await this.getAccessToken();
+            const response = await fetch(this.baseUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: new URLSearchParams({
+                    method: 'food.get.v3',
+                format: 'json',
+                    food_id: foodId
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`API request failed with status ${response.status}`);
+            }
+
+            const data = await response.json();
+            if (!data?.food) {
+                throw new Error('Invalid food data response format');
+            }
+
+            return data;
+        } catch (error) {
+            logger.error('Error getting food nutrition from FatSecret API:', { error: error.message });
+            throw error;
+        }
+    }
+
+    async getNutritionData(foodName) {
+        try {
+            const foods = await this.searchFood(foodName);
+            if (!foods || foods.length === 0) {
+                return null;
+            }
+
+            const food = Array.isArray(foods) ? foods[0] : foods;
+            const token = await this.getAccessToken();
+            const response = await axios.post(this.baseUrl, null, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                params: {
+                    method: 'food.get.v3',
+                    food_id: food.food_id,
+                    format: 'json'
+                }
+            });
+
+            if (response.status === 200 && response.data.food) {
+                return NutritionDataStandardizer.standardizeNutritionData(response.data, 'fatsecret');
+            }
+
+            return null;
+        } catch (error) {
+            logger.error('Error getting nutrition data from FatSecret:', { error: error.message });
+            return null;
+        }
     }
 
     async getMealNutritionData(meal) {
         try {
-            const token = await this.getAccessToken();
-            logger.info('Getting nutrition data for meal:', { name: meal.name });
+            // Check cache first
+            const cachedData = await nutritionCache.get(meal.name);
+            if (cachedData) {
+                return cachedData;
+            }
 
-            // Create a natural language description of the meal
-            const mealDescription = `${meal.name} with ${meal.ingredients}`;
-            
-            const response = await axios.post(
-                `${this.baseURL}/natural-language-processing/v1`,
-                {
-                    user_input: mealDescription,
-                    region: 'US',
-                    language: 'en',
-                    include_food_data: true
-                },
-                {
-                    headers: {
-                        'Authorization': `Bearer ${token}`,
-                        'Content-Type': 'application/json'
-                    }
+            // If meal has ingredients, calculate nutrition from ingredients
+            if (meal.ingredients) {
+                const ingredients = meal.ingredients.split(',').map(i => i.trim());
+                const batchData = await this.getBatchNutritionData(ingredients);
+                
+                if (batchData.results && Object.keys(batchData.results).length > 0) {
+                    const combinedData = this.combineNutritionData(batchData.results);
+                    await nutritionCache.set(meal.name, combinedData, 'fatsecret');
+                    return combinedData;
                 }
-            );
-
-            if (!response.data.food_response || response.data.food_response.length === 0) {
-                logger.warn('No nutrition data found for meal:', { name: meal.name });
-                return null;
             }
 
-            // Extract and combine nutrition data from all foods in the meal
-            const totalNutrition = this.extractTotalNutrition(response.data);
-            
-            logger.info('Successfully retrieved nutrition data for meal:', { 
-                name: meal.name,
-                calories: totalNutrition.calories
-            });
+            // If that fails, try to get data for the whole meal
+            const response = await this.getNutritionData(meal.name);
+            if (response) {
+                await nutritionCache.set(meal.name, response, 'fatsecret');
+                return response;
+            }
 
-            return {
-                mealName: meal.name,
-                nutrition: totalNutrition,
-                foods: response.data.food_response.map(food => ({
-                    name: food.food_entry_name,
-                    nutrition: food.eaten.total_nutritional_content
-                }))
-            };
+            return null;
         } catch (error) {
-            logger.error('Error getting meal nutrition data:', {
-                meal: meal.name,
-                error: error.message,
-                status: error.response?.status,
-                data: error.response?.data
-            });
+            logger.error('Error in getMealNutritionData:', { error: error.message });
             return null;
         }
     }
 
-    extractTotalNutrition(response) {
-        if (!response || !response.food_response) {
-            return null;
-        }
-
-        const totalNutrition = {
-            calories: 0,
-            carbohydrate: 0,
-            protein: 0,
-            fat: 0,
-            saturated_fat: 0,
-            polyunsaturated_fat: 0,
-            monounsaturated_fat: 0,
-            cholesterol: 0,
-            sodium: 0,
-            potassium: 0,
-            fiber: 0,
-            sugar: 0,
-            vitamin_a: 0,
-            vitamin_c: 0,
-            calcium: 0,
-            iron: 0
-        };
-
-        response.food_response.forEach(food => {
-            if (food.eaten && food.eaten.total_nutritional_content) {
-                const nutrition = food.eaten.total_nutritional_content;
-                Object.keys(totalNutrition).forEach(key => {
-                    if (nutrition[key]) {
-                        totalNutrition[key] += parseFloat(nutrition[key]);
-                    }
-                });
-            }
-        });
-
-        return totalNutrition;
-    }
-
-    async getBatchMealNutritionData(meals) {
-        logger.info('Getting batch nutrition data for multiple meals');
+    async getBatchNutritionData(ingredients) {
         const results = {};
         const missing = [];
+    
+        for (const ingredient of ingredients) {
+            try {
+                // Extract quantity and unit if present (e.g., "1 cup", "2 tbsp")
+                const match = ingredient.match(/^(\d+(?:\.\d+)?)\s*(cup|tbsp|tsp|oz|g|ml|piece|medium|large|small)?\s+(.+)$/i);
+                let quantity = 1;
+                let unit = '';
+                let ingredientName = ingredient;
 
-        for (const [mealType, meal] of Object.entries(meals)) {
-            const nutritionData = await this.getMealNutritionData(meal);
+                if (match) {
+                    quantity = parseFloat(match[1]);
+                    unit = match[2] || '';
+                    ingredientName = match[3].trim();
+                }
+
+                const nutritionData = await this.getNutritionData(ingredientName);
             if (nutritionData) {
-                results[mealType] = nutritionData;
+                    // Adjust nutrition values based on quantity
+                    const adjustedData = this.adjustNutritionForQuantity(nutritionData, quantity, unit);
+                    results[ingredient] = adjustedData;
             } else {
-                missing.push(mealType);
+                    missing.push(ingredient);
+                }
+            } catch (error) {
+                logger.error(`Error processing ingredient ${ingredient}:`, { error: error.message });
+                missing.push(ingredient);
             }
         }
 
-        logger.info('Batch meal nutrition data retrieval complete:', {
-            found: Object.keys(results).length,
-            missing: missing.length
+        return { results, missing };
+    }
+
+    adjustNutritionForQuantity(data, quantity, unit) {
+        const multiplier = this.getQuantityMultiplier(quantity, unit);
+        const adjusted = { ...data };
+
+        // Adjust all nutrition values
+        adjusted.calories *= multiplier;
+        adjusted.macros.protein_g *= multiplier;
+        adjusted.macros.carbs_g *= multiplier;
+        adjusted.macros.fats_g *= multiplier;
+        adjusted.macros.fiber_g *= multiplier;
+        adjusted.macros.sugars_g *= multiplier;
+        adjusted.vitamins.vitamin_A_mcg *= multiplier;
+        adjusted.vitamins.vitamin_C_mg *= multiplier;
+        adjusted.minerals.calcium_mg *= multiplier;
+        adjusted.minerals.iron_mg *= multiplier;
+        adjusted.minerals.potassium_mg *= multiplier;
+        adjusted.minerals.sodium_mg *= multiplier;
+
+        return NutritionDataStandardizer.roundNutritionValues(adjusted);
+    }
+
+    getQuantityMultiplier(quantity, unit) {
+        // Default multipliers based on common serving sizes
+        const multipliers = {
+            'cup': 1,
+            'tbsp': 0.0625, // 1/16 cup
+            'tsp': 0.0208,  // 1/48 cup
+            'oz': 0.125,    // 1/8 cup
+            'g': 0.0042,    // 1/240 cup
+            'ml': 0.0042,   // 1/240 cup
+            'piece': 1,
+            'medium': 1,
+            'large': 1.5,
+            'small': 0.75
+        };
+
+        return quantity * (multipliers[unit.toLowerCase()] || 1);
+    }
+
+    combineNutritionData(nutritionData) {
+        const combined = {
+            food_name: 'Combined Meal',
+            calories: 0,
+            macros: {
+                protein_g: 0,
+                carbs_g: 0,
+                fats_g: 0,
+                fiber_g: 0,
+                sugars_g: 0
+            },
+            vitamins: {
+                vitamin_A_mcg: 0,
+                vitamin_C_mg: 0
+            },
+            minerals: {
+                calcium_mg: 0,
+                iron_mg: 0,
+                potassium_mg: 0,
+                sodium_mg: 0
+            }
+        };
+
+        // Sum up all nutrition values
+        Object.values(nutritionData).forEach(data => {
+            if (!data) return;
+
+            // Add calories
+            combined.calories += data.calories || 0;
+
+            // Add macros
+            if (data.macros) {
+                combined.macros.protein_g += data.macros.protein_g || 0;
+                combined.macros.carbs_g += data.macros.carbs_g || 0;
+                combined.macros.fats_g += data.macros.fats_g || 0;
+                combined.macros.fiber_g += data.macros.fiber_g || 0;
+                combined.macros.sugars_g += data.macros.sugars_g || 0;
+            }
+
+            // Add vitamins
+            if (data.vitamins) {
+                combined.vitamins.vitamin_A_mcg += data.vitamins.vitamin_A_mcg || 0;
+                combined.vitamins.vitamin_C_mg += data.vitamins.vitamin_C_mg || 0;
+            }
+
+            // Add minerals
+            if (data.minerals) {
+                combined.minerals.calcium_mg += data.minerals.calcium_mg || 0;
+                combined.minerals.iron_mg += data.minerals.iron_mg || 0;
+                combined.minerals.potassium_mg += data.minerals.potassium_mg || 0;
+                combined.minerals.sodium_mg += data.minerals.sodium_mg || 0;
+            }
         });
 
-        return {
-            results,
-            missing
-        };
+        // Round all values to 2 decimal places
+        const rounded = NutritionDataStandardizer.roundNutritionValues(combined);
+
+        // Validate the combined data
+        try {
+            NutritionDataStandardizer.validateNutritionData(rounded);
+        } catch (error) {
+            logger.error('Invalid combined nutrition data:', { error: error.message });
+            throw error;
+        }
+
+        return rounded;
     }
 }
 

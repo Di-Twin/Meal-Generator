@@ -29,6 +29,6 @@ class RateLimiter {
 }
 
 // Create a singleton instance for FatSecret API
-const fatSecretLimiter = new RateLimiter(4500, 24 * 60 * 60 * 1000); // 4500 calls per day (leaving buffer)
+const fatSecretLimiter = new RateLimiter(48000, 24 * 60 * 60 * 1000); // 4500 calls per day (leaving buffer)
 
 module.exports = fatSecretLimiter; 

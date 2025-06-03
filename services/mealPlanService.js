@@ -55,3 +55,4 @@ const generateMealPlan = async (userData) => {
 module.exports = {
   generateMealPlan
 }; 
+

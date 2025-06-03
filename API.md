@@ -1,18 +1,34 @@
 # Meal Generator API Documentation
 
+## Overview
+The Meal Generator API provides endpoints for generating personalized meal plans and analyzing nutrition data. The API integrates with Nutritionix and FatSecret APIs for nutrition data and uses AI for meal plan generation.
+
 ## Base URL
 ```
-http://localhost:3000/api
+https://your-domain.com/api
 ```
+
+## Authentication
+All endpoints require API keys in the request headers:
+```
+x-app-id: YOUR_APP_ID
+x-app-key: YOUR_APP_KEY
+```
+
+## Rate Limiting
+- 100 requests per 15 minutes per IP address
+- Rate limit headers included in response
 
 ## Endpoints
 
-### Generate Meal Plan
+### 1. Meal Plans
+
+#### 1.1 Generate Meal Plan
 ```http
-POST /meal-plans
+POST /api/meal-plans
 ```
 
-Request Body:
+**Request Body:**
 ```json
 {
   "name": "string",
@@ -23,183 +39,127 @@ Request Body:
   "activity": "string",
   "goal": "string",
   "dailyCalories": "number",
-  "macroSplit": {
-    "protein": "number",
-    "carbs": "number",
-    "fats": "number"
-  },
-  "allergies": ["string"],
-  "avoid": ["string"]
+  "macroSplit": "object",
+  "allergies": "string[]",
+  "avoid": "string[]",
+  "cuisinePreference": "string",
+  "numberOfDays": "number"  // Number of days for the meal plan (default: 7)
 }
 ```
 
-Response (201 Created):
+**Response:**
 ```json
 {
   "success": true,
   "message": "Meal plan generated successfully",
   "data": {
-    "id": "uuid",
-    "planData": {
-      "dailyMeals": [
-        {
-          "day": "string",
-          "meals": [
-            {
-              "name": "string",
-              "ingredients": ["string"],
-              "instructions": ["string"],
-              "nutrition": {
-                "calories": "number",
-                "protein": "number",
-                "carbs": "number",
-                "fats": "number"
-              }
-            }
-          ],
-          "dailyMacros": {
-            "calories": "number",
-            "protein": "number",
-            "carbs": "number",
-            "fats": "number"
-          }
-        }
-      ],
-      "weeklyMacros": {
-        "calories": "number",
-        "protein": "number",
-        "carbs": "number",
-        "fats": "number"
-      }
-    },
+    "id": "string",
     "startDate": "date",
     "endDate": "date",
     "status": "string",
-    "createdAt": "date",
-    "updatedAt": "date"
+    "planData": {
+      "days": [
+        {
+          "day": "string",
+          "meals": {
+            "breakfast": {
+              "name": "string",
+              "ingredients": "string",
+              "description": "string",
+              "estimatedCalories": "number",
+              "nutrition": {
+                "calories": "number",
+                "macros": {
+                  "protein_g": "number",
+                  "carbs_g": "number",
+                  "fats_g": "number",
+                  "fiber_g": "number",
+                  "sugars_g": "number"
+                },
+                "vitamins": {
+                  "vitamin_A_mcg": "number",
+                  "vitamin_C_mg": "number"
+                },
+                "minerals": {
+                  "calcium_mg": "number",
+                  "iron_mg": "number",
+                  "potassium_mg": "number",
+                  "sodium_mg": "number"
+                }
+              }
+            }
+          },
+          "daily_nutrition": {
+            "calories": "number",
+            "macros": {
+              "protein_g": "number",
+              "carbs_g": "number",
+              "fats_g": "number",
+              "fiber_g": "number",
+              "sugars_g": "number"
+            },
+            "vitamins": {
+              "vitamin_A_mcg": "number",
+              "vitamin_C_mg": "number"
+            },
+            "minerals": {
+              "calcium_mg": "number",
+              "iron_mg": "number",
+              "potassium_mg": "number",
+              "sodium_mg": "number"
+            }
+          }
+        }
+      ]
+    }
   }
 }
 ```
 
-### Get Current Meal Plan
+#### 1.2 Get Current Meal Plan
 ```http
-GET /meal-plans/current
+GET /api/meal-plans/current
 ```
 
-Response (200 OK):
+**Response:** Same as Generate Meal Plan response
+
+#### 1.3 Get Meal Plan by ID
+```http
+GET /api/meal-plans/:id
+```
+
+**Response:** Same as Generate Meal Plan response
+
+#### 1.4 Update Meal Plan Status
+```http
+PATCH /api/meal-plans/:id
+```
+
+**Request Body:**
 ```json
 {
-  "success": true,
-  "message": "Meal plan retrieved successfully",
-  "data": {
-    "id": "uuid",
-    "planData": {
-      "dailyMeals": [
-        {
-          "day": "string",
-          "meals": [
-            {
-              "name": "string",
-              "ingredients": ["string"],
-              "instructions": ["string"],
-              "nutrition": {
-                "calories": "number",
-                "protein": "number",
-                "carbs": "number",
-                "fats": "number"
-              }
-            }
-          ],
-          "dailyMacros": {
-            "calories": "number",
-            "protein": "number",
-            "carbs": "number",
-            "fats": "number"
-          }
-        }
-      ],
-      "weeklyMacros": {
-        "calories": "number",
-        "protein": "number",
-        "carbs": "number",
-        "fats": "number"
-      }
-    },
-    "startDate": "date",
-    "endDate": "date",
-    "status": "string",
-    "createdAt": "date",
-    "updatedAt": "date"
-  }
+  "status": "string" // One of: "active", "completed", "cancelled"
 }
 ```
 
-### Update Meal Plan
-```http
-PATCH /meal-plans/:id
-```
-
-Request Body:
-```json
-{
-  "status": "string"
-}
-```
-
-Response (200 OK):
+**Response:**
 ```json
 {
   "success": true,
   "message": "Meal plan updated successfully",
   "data": {
-    "id": "uuid",
-    "planData": {
-      "dailyMeals": [
-        {
-          "day": "string",
-          "meals": [
-            {
-              "name": "string",
-              "ingredients": ["string"],
-              "instructions": ["string"],
-              "nutrition": {
-                "calories": "number",
-                "protein": "number",
-                "carbs": "number",
-                "fats": "number"
-              }
-            }
-          ],
-          "dailyMacros": {
-            "calories": "number",
-            "protein": "number",
-            "carbs": "number",
-            "fats": "number"
-          }
-        }
-      ],
-      "weeklyMacros": {
-        "calories": "number",
-        "protein": "number",
-        "carbs": "number",
-        "fats": "number"
-      }
-    },
-    "startDate": "date",
-    "endDate": "date",
-    "status": "string",
-    "createdAt": "date",
-    "updatedAt": "date"
+    "id": "string",
+    "status": "string"
   }
 }
 ```
 
-### Delete Meal Plan
+#### 1.5 Delete Meal Plan
 ```http
-DELETE /meal-plans/:id
+DELETE /api/meal-plans/:id
 ```
 
-Response (200 OK):
+**Response:**
 ```json
 {
   "success": true,
@@ -207,62 +167,151 @@ Response (200 OK):
 }
 ```
 
-## Error Responses
+### 2. Nutrition Analysis
 
-### 400 Bad Request
+#### 2.1 Analyze Single Meal
+```http
+POST /api/nutrition/analyze
+```
+
+**Request Body:**
 ```json
 {
-  "success": false,
-  "message": "Invalid request data",
-  "errors": ["string"]
+  "name": "string",
+  "ingredients": "string"
 }
 ```
 
-### 404 Not Found
+**Response:**
 ```json
 {
-  "success": false,
-  "message": "Resource not found"
+  "success": true,
+  "data": {
+    "mealName": "string",
+    "nutrition": {
+      "calories": "number",
+      "macros": {
+        "protein_g": "number",
+        "carbs_g": "number",
+        "fats_g": "number",
+        "fiber_g": "number",
+        "sugars_g": "number"
+      },
+      "vitamins": {
+        "vitamin_A_mcg": "number",
+        "vitamin_C_mg": "number"
+      },
+      "minerals": {
+        "calcium_mg": "number",
+        "iron_mg": "number",
+        "potassium_mg": "number",
+        "sodium_mg": "number"
+      }
+    }
+  }
 }
 ```
 
-### 500 Internal Server Error
+#### 2.2 Batch Nutrition Analysis
+```http
+POST /api/nutrition/analyze-batch
+```
+
+**Request Body:**
+```json
+{
+  "meals": {
+    "mealType": {
+      "name": "string",
+      "ingredients": "string"
+    }
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "data": {
+    "results": {
+      "mealType": {
+        "mealName": "string",
+        "nutrition": {
+          "calories": "number",
+          "macros": {
+            "protein_g": "number",
+            "carbs_g": "number",
+            "fats_g": "number",
+            "fiber_g": "number",
+            "sugars_g": "number"
+          },
+          "vitamins": {
+            "vitamin_A_mcg": "number",
+            "vitamin_C_mg": "number"
+          },
+          "minerals": {
+            "calcium_mg": "number",
+            "iron_mg": "number",
+            "potassium_mg": "number",
+            "sodium_mg": "number"
+          }
+        }
+      }
+    },
+    "missing": ["string"]
+  }
+}
+```
+
+## Error Handling
+
+All endpoints follow a consistent error response format:
+
 ```json
 {
   "success": false,
-  "message": "Internal server error"
+  "message": "string",
+  "error": "string" // Optional
 }
 ```
+
+Common error codes:
+- 400: Bad Request - Invalid input data
+- 401: Unauthorized - Invalid or missing API keys
+- 403: Forbidden - Insufficient permissions
+- 404: Not Found - Resource not found
+- 429: Too Many Requests - Rate limit exceeded
+- 500: Internal Server Error - Server-side error
+- 503: Service Unavailable - External service (Nutritionix/FatSecret) unavailable
 
 ## Data Types
 
-### Status Values
-- `active`: The meal plan is currently active
-- `completed`: The meal plan has been completed
-- `cancelled`: The meal plan has been cancelled
-
-### Gender Values
-- `male`
-- `female`
-- `other`
-
 ### Activity Levels
-- `sedentary`: Little or no exercise
-- `light`: Light exercise 1-3 days/week
-- `moderate`: Moderate exercise 3-5 days/week
-- `active`: Hard exercise 6-7 days/week
-- `very_active`: Very hard exercise & physical job or training twice per day
+- sedentary
+- light
+- moderate
+- active
+- very_active
 
-### Goal Values
-- `weight_loss`: Reduce body weight
-- `weight_maintenance`: Maintain current weight
-- `weight_gain`: Increase body weight
-- `muscle_gain`: Build muscle mass
+### Goals
+- weight_loss
+- weight_maintenance
+- weight_gain
+- muscle_gain
 
-## Rate Limiting
-The API implements rate limiting to prevent abuse. The current limits are:
-- 100 requests per minute per IP address
-- 1000 requests per hour per IP address
+### Genders
+- male
+- female
+- other
 
-## Caching
-The API implements caching for frequently accessed data to improve performance. Cache duration is set to 5 minutes for meal plan data. 
+### Meal Types
+- breakfast
+- lunch
+- dinner
+- snack
+
+### Status Values
+- active
+- completed
+- cancelled 

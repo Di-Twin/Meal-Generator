@@ -1,0 +1,12 @@
+{"level":"info","message":"Initializing NutritionCache with 24-hour TTL","service":"meal-generator","timestamp":"2025-06-02 18:36:59.580"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:37.429"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:37.492"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:37.605"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:37.780"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:37.994"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:38.251"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:38.561"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:38.931"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:39.339"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:39.809"}
+{"level":"warn","message":"🔄 Reconnecting to Redis...","service":"meal-generator","timestamp":"2025-06-02 18:39:40.319"}

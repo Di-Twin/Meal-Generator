@@ -1,0 +1,1044 @@
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03T03:23:06.157Z"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03T03:23:06.161Z"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03T03:23:06.162Z"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03T03:23:06.387Z"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03T03:23:06.498Z"}
+{"error":"getaddrinfo ENOTFOUND trackapi.nutritionix.com","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","timestamp":"2025-06-03T03:23:06.507Z"}
+{"level":"info","message":"Verifying FatSecret API connection as fallback...","service":"meal-generator","timestamp":"2025-06-03T03:23:06.508Z"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"apple","service":"meal-generator","timestamp":"2025-06-03T03:23:06.509Z"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03T03:23:06.510Z"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03T03:25:26.567Z"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03T03:25:26.571Z"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03T03:25:26.572Z"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03T03:25:26.825Z"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03T03:25:26.987Z"}
+{"error":"getaddrinfo ENOTFOUND trackapi.nutritionix.com","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","timestamp":"2025-06-03T03:25:30.976Z"}
+{"level":"info","message":"Verifying FatSecret API connection as fallback...","service":"meal-generator","timestamp":"2025-06-03T03:25:30.977Z"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"apple","service":"meal-generator","timestamp":"2025-06-03T03:25:30.978Z"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03T03:25:30.979Z"}
+{"clientIdPrefix":"f6fc...","level":"error","message":"❌ Error getting FatSecret access token: getaddrinfo ENOTFOUND oauth.fatsecret.com","service":"meal-generator","timestamp":"2025-06-03T03:25:30.989Z"}
+{"error":"Failed to authenticate with FatSecret API","level":"error","message":"Error searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03T03:25:30.990Z"}
+{"ingredient":"apple","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03T03:25:30.991Z"}
+{"level":"warn","message":"No nutrition data found for any ingredients in meal:","name":"apple","service":"meal-generator","timestamp":"2025-06-03T03:25:30.992Z"}
+{"fatSecretError":"FatSecret API test returned no data","level":"error","message":"Both Nutritionix and FatSecret API connections failed:","nutritionixError":"getaddrinfo ENOTFOUND trackapi.nutritionix.com","service":"meal-generator","timestamp":"2025-06-03T03:25:30.992Z"}
+{"error":"All nutrition API services are unavailable","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","timestamp":"2025-06-03T03:25:30.993Z"}
+{"level":"error","message":"Initialization error: getaddrinfo ENOTFOUND ep-purple-sun-a1pl2mcg-pooler.ap-southeast-1.aws.neon.tech","name":"SequelizeHostNotFoundError","original":{"code":"ENOTFOUND","errno":-3008,"hostname":"ep-purple-sun-a1pl2mcg-pooler.ap-southeast-1.aws.neon.tech","syscall":"getaddrinfo"},"parent":{"code":"ENOTFOUND","errno":-3008,"hostname":"ep-purple-sun-a1pl2mcg-pooler.ap-southeast-1.aws.neon.tech","syscall":"getaddrinfo"},"service":"meal-generator","stack":"SequelizeHostNotFoundError: getaddrinfo ENOTFOUND ep-purple-sun-a1pl2mcg-pooler.ap-southeast-1.aws.neon.tech\n    at Client._connectionCallback (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\postgres\\connection-manager.js:136:24)\n    at Client._handleErrorWhileConnecting (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\pg\\lib\\client.js:336:19)\n    at Client._handleErrorEvent (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\pg\\lib\\client.js:346:19)\n    at Connection.emit (node:events:518:28)\n    at Socket.reportStreamError (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\pg\\lib\\connection.js:57:12)\n    at Socket.emit (node:events:518:28)\n    at emitErrorNT (node:internal/streams/destroy:169:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:128:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-06-03T03:25:31.018Z"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03T03:27:15.171Z"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03T03:27:15.191Z"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03T03:27:15.194Z"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03T03:27:15.815Z"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03T03:27:16.177Z"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03T03:27:17.674Z"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 08:57:19.515"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 08:57:19.601"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 08:57:19.602"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 08:57:19.855"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 08:57:20.002"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 08:57:21.430"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 08:57:21.542"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 08:57:21.543"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 08:57:21.545"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 08:57:21.548"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 08:57:23.194"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 08:57:23.196"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:57:24.641"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 08:57:24.643"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:57:24.964"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 08:57:24.965"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:57:25.255"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 08:57:25.257"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:57:25.551"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 08:57:25.553"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:57:25.840"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 08:57:25.842"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 08:57:25.843"}
+{"level":"info","message":"Memory cache cleared","service":"meal-generator","timestamp":"2025-06-03 08:57:38.554"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 08:57:43.660"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 08:57:43.685"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 08:57:43.686"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 08:57:43.854"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 08:57:43.942"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 08:57:45.361"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 08:57:45.469"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 08:57:45.470"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 08:57:45.472"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 08:57:45.474"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 08:57:46.998"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 08:57:46.999"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:57:48.381"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 08:57:48.383"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:57:48.668"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 08:57:48.669"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:57:48.954"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 08:57:48.955"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:57:49.242"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 08:57:49.243"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:57:49.542"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 08:57:49.543"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 08:57:49.544"}
+{"level":"info","message":"Memory cache cleared","service":"meal-generator","timestamp":"2025-06-03 08:58:28.051"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 08:58:33.228"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 08:58:33.252"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 08:58:33.253"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 08:58:33.417"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 08:58:33.523"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 08:58:35.801"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 08:58:38.651"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 08:58:38.653"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 08:58:38.654"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 08:58:38.657"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 08:58:40.406"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 08:58:40.408"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:58:42.113"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 08:58:42.114"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:58:42.426"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 08:58:42.428"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:58:42.803"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 08:58:42.804"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:58:43.243"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 08:58:43.244"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 08:58:43.955"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 08:58:43.956"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 08:58:43.958"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 08:59:43.748"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 08:59:43.796"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 08:59:43.800"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 08:59:44.008"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 08:59:44.098"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 08:59:46.125"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 08:59:46.876"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 08:59:46.878"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 08:59:46.880"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 08:59:46.882"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"06/03/2025, 03:29:48"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"06/03/2025, 03:29:48"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"06/03/2025, 03:29:48"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:29:49"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"06/03/2025, 03:29:49"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"06/03/2025, 03:29:50"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"06/03/2025, 03:29:51"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:29:51"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:29:51"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:29:51"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:29:52"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"06/03/2025, 03:29:52"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:29:54"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"06/03/2025, 03:29:54"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:29:54"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"06/03/2025, 03:29:54"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:29:54"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"06/03/2025, 03:29:54"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:29:55"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"06/03/2025, 03:29:55"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:29:55"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:29:55"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"06/03/2025, 03:29:55"}
+{"level":"info","message":"Memory cache cleared","service":"meal-generator","timestamp":"06/03/2025, 03:29:55"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"06/03/2025, 03:30:17"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"06/03/2025, 03:30:17"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"06/03/2025, 03:30:17"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:30:17"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"06/03/2025, 03:30:17"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"06/03/2025, 03:30:19"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"06/03/2025, 03:30:20"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:30:20"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:30:20"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:30:20"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:30:22"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"06/03/2025, 03:30:22"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:30:24"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"06/03/2025, 03:30:24"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:30:25"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"06/03/2025, 03:30:25"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:30:25"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"06/03/2025, 03:30:25"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:30:25"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"06/03/2025, 03:30:25"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:30:26"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:30:26"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"06/03/2025, 03:30:26"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"06/03/2025, 03:31:07"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"06/03/2025, 03:31:07"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"06/03/2025, 03:31:07"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:07"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"06/03/2025, 03:31:07"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"06/03/2025, 03:31:09"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:09"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:31:09"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:31:09"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"06/03/2025, 03:31:11"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"06/03/2025, 03:31:11"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"06/03/2025, 03:31:11"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:11"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"06/03/2025, 03:31:11"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"06/03/2025, 03:31:13"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"06/03/2025, 03:31:13"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:13"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:31:13"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:31:13"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:31:15"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"06/03/2025, 03:31:15"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:17"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"06/03/2025, 03:31:17"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:17"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"06/03/2025, 03:31:17"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:17"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"06/03/2025, 03:31:17"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:18"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"06/03/2025, 03:31:18"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:18"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:31:18"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"06/03/2025, 03:31:18"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"06/03/2025, 03:31:20"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"06/03/2025, 03:31:20"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"06/03/2025, 03:31:20"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:20"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"06/03/2025, 03:31:20"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"06/03/2025, 03:31:22"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"06/03/2025, 03:31:22"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:22"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:31:22"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:31:22"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"06/03/2025, 03:31:24"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"06/03/2025, 03:31:24"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"06/03/2025, 03:31:24"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:24"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"06/03/2025, 03:31:24"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"06/03/2025, 03:31:26"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"06/03/2025, 03:31:27"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:27"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:31:27"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:31:27"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:31:29"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"06/03/2025, 03:31:29"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:30"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"06/03/2025, 03:31:30"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:31"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"06/03/2025, 03:31:31"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"06/03/2025, 03:31:32"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"06/03/2025, 03:31:32"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"06/03/2025, 03:31:32"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:32"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"06/03/2025, 03:31:32"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"06/03/2025, 03:31:34"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"06/03/2025, 03:31:34"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:34"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:31:34"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:31:34"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:31:35"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"06/03/2025, 03:31:35"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"06/03/2025, 03:31:37"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"06/03/2025, 03:31:37"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"06/03/2025, 03:31:37"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:37"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"06/03/2025, 03:31:37"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"06/03/2025, 03:31:39"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"06/03/2025, 03:31:40"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:40"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:31:40"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:31:40"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:31:42"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"06/03/2025, 03:31:42"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:43"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"06/03/2025, 03:31:43"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:43"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"06/03/2025, 03:31:43"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:44"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"06/03/2025, 03:31:44"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:44"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"06/03/2025, 03:31:44"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"06/03/2025, 03:31:45"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:31:45"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"06/03/2025, 03:31:45"}
+{"level":"info","message":"Memory cache cleared","service":"meal-generator","timestamp":"06/03/2025, 03:31:45"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"06/03/2025, 03:31:50"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"06/03/2025, 03:31:50"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"06/03/2025, 03:31:50"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:31:50"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"06/03/2025, 03:31:51"}
+{"error":"read ECONNRESET","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","timestamp":"06/03/2025, 03:32:09"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"06/03/2025, 03:33:40"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"06/03/2025, 03:33:41"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"06/03/2025, 03:33:41"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:33:41"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"06/03/2025, 03:33:41"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"06/03/2025, 03:33:43"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"06/03/2025, 03:33:43"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"06/03/2025, 03:33:43"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"06/03/2025, 03:33:43"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"06/03/2025, 03:33:43"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:03:46.603"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:03:46.607"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:03:46.610"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:03:46.846"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:03:46.961"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:03:48.596"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:03:49.073"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:03:49.074"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:03:49.075"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:03:49.077"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:03:50.508"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:03:50.509"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:03:52.238"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:03:52.240"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:03:52.555"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:03:52.556"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:03:52.856"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:03:52.856"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:03:53.203"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:03:53.204"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:03:53.478"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:03:53.479"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:03:53.479"}
+{"level":"info","message":"Memory cache cleared","service":"meal-generator","timestamp":"2025-06-03 09:04:11.587"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:04:52.050"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:04:52.053"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:04:52.054"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:04:52.217"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:04:52.320"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:04:54.108"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:04:54.626"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:04:54.627"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:04:54.628"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:04:54.630"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:04:56.242"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:04:56.243"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:04:58.162"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:04:58.163"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:04:58.651"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:04:58.652"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:04:59.120"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:04:59.121"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:04:59.406"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:04:59.407"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:04:59.965"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:04:59.966"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:04:59.967"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:05:33.666"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:05:33.670"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:05:33.671"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:05:33.910"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:05:34.004"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:05:35.506"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:05:35.724"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:05:35.725"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:05:35.726"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:05:35.728"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:05:37.232"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:05:37.232"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:05:38.650"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:05:38.651"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:05:38.950"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:05:38.951"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:05:39.259"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:05:39.259"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:05:39.626"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:05:39.627"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:05:39.926"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:05:39.927"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:05:39.928"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:06:21.179"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:06:21.183"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:06:21.185"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:06:21.449"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:06:21.553"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:06:23.193"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:06:23.194"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:06:23.195"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:06:23.248"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:06:23.813"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:06:24.890"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:06:24.891"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:06:26.528"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:06:26.530"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:06:26.836"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:06:26.837"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:06:27.121"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:06:27.122"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:06:28.417"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:06:28.420"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:06:28.421"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:06:28.656"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:06:28.762"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:06:30.404"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:06:31.071"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:06:31.072"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:06:31.073"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:06:31.075"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:06:32.725"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:06:32.726"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:06:34.223"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:06:34.225"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:06:34.520"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:06:34.521"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:06:34.823"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:06:34.824"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:06:35.187"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:06:35.188"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:06:35.486"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:06:35.487"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:06:35.487"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:07:16.296"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:07:16.302"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:07:16.304"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:07:16.541"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:07:16.690"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:07:18.162"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:07:18.444"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:07:18.446"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:07:18.448"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:07:18.450"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:07:19.892"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:07:19.894"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:07:21.386"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:07:21.387"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:07:21.683"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:07:21.684"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:07:22.042"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:07:22.042"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:07:22.417"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:07:22.418"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:07:22.716"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:07:22.717"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:07:22.718"}
+{"level":"info","message":"Memory cache cleared","service":"meal-generator","timestamp":"2025-06-03 09:08:37.810"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:08:42.572"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:08:42.578"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:08:42.579"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:08:42.793"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:08:42.889"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:08:45.482"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:08:46.595"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:08:46.596"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:08:46.597"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:08:46.599"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:08:48.247"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:08:48.248"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:08:49.910"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:08:49.911"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:08:50.263"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:08:50.264"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:08:50.566"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:08:50.567"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:08:50.866"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:08:50.867"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:08:51.172"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:08:51.174"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:08:51.175"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:09:40.931"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:09:40.937"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:09:40.939"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:09:41.213"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:09:41.329"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:09:42.851"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:09:44.085"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:09:44.088"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:09:44.089"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:09:44.319"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:09:44.411"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:09:46.064"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:09:46.066"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:09:46.067"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:09:46.068"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:09:46.079"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:09:47.512"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:09:47.513"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:09:48.989"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:09:48.990"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:09:49.366"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:09:49.367"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:09:49.665"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:09:49.666"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:09:50.038"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:09:50.039"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:09:50.339"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:09:50.340"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:09:50.341"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:10:43.037"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:10:43.041"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:10:43.043"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:10:43.288"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:10:43.401"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:10:44.904"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:10:45.425"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:10:45.427"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:10:45.428"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:10:45.431"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:10:48.194"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:10:48.197"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:10:48.198"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:10:48.440"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:10:48.561"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:10:50.098"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:10:50.228"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:10:50.229"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:10:50.230"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:10:50.232"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:10:51.804"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:10:51.805"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:10:53.451"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:10:53.452"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:10:53.827"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:10:53.828"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:10:54.126"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:10:54.127"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:10:54.447"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:10:54.448"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:10:54.802"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:10:54.803"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:10:54.804"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:11:11.719"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:11:11.728"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:11:11.730"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:11:11.937"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:11:12.031"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:11:13.563"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:11:13.778"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:11:13.779"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:11:13.780"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:11:13.782"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:11:16.176"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:11:16.179"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:11:16.181"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:11:16.427"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:11:16.525"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:11:17.981"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:11:18.211"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:11:18.212"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:11:18.214"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:11:18.217"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:11:19.637"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:11:19.638"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:21.052"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:11:21.053"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:21.430"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:11:21.431"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:21.738"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:11:21.739"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:22.030"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:11:22.031"}
+{"count":1,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:22.326"}
+{"calories":368,"level":"info","message":"Successfully retrieved consolidated nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:11:22.327"}
+{"calories":368,"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:11:22.328"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:11:38.110"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:11:38.115"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:11:38.116"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:11:38.360"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:11:38.459"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:11:39.977"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:11:40.104"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:11:40.106"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:11:40.107"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:11:40.109"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:11:43.170"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:11:43.173"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:11:43.174"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:11:43.375"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:11:43.507"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:11:44.986"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:11:45.297"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:11:45.298"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:11:45.300"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:11:45.302"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:11:46.787"}
+{"level":"info","message":"Searching for foods:","searchExpression":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:11:46.788"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:48.219"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:11:48.220"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:48.582"}
+{"ingredient":"chicken breast","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:11:48.583"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:11:48.650"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:48.959"}
+{"ingredient":"mixed greens","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:11:48.960"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:11:48.961"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:49.262"}
+{"ingredient":"cherry tomatoes","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:11:49.263"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:11:49.264"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:49.570"}
+{"ingredient":"cucumber","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:11:49.571"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:11:49.571"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:11:49.877"}
+{"ingredient":"olive oil","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:11:49.877"}
+{"calories":0,"level":"info","mealName":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:11:49.878"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:14:00.191"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:14:00.198"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:14:00.199"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:14:00.419"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:14:00.509"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:14:01.831"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:14:01.835"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:14:01.836"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:14:02.060"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:14:02.150"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:14:03.725"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:14:05.294"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:14:05.295"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:14:05.296"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:14:05.297"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:14:07.246"}
+{"level":"info","message":"Searching for foods:","searchExpression":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:14:07.247"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:14:08.906"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:14:08.907"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:14:09.267"}
+{"ingredient":"chicken breast","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:14:09.268"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:14:09.268"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:14:09.655"}
+{"ingredient":"mixed greens","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:14:09.657"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:14:09.658"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:14:09.949"}
+{"ingredient":"cherry tomatoes","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:14:09.950"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:14:09.950"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:14:10.316"}
+{"ingredient":"cucumber","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:14:10.317"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:14:10.318"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:14:10.692"}
+{"ingredient":"olive oil","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:14:10.693"}
+{"calories":0,"level":"info","mealName":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:14:10.694"}
+{"level":"info","message":"Memory cache cleared","service":"meal-generator","timestamp":"2025-06-03 09:14:23.068"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:14:40.831"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:14:40.835"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:14:40.837"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:14:41.042"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:14:41.147"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:14:42.665"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:14:43.113"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:14:43.114"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:14:43.116"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:14:43.117"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:14:44.337"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:14:44.348"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:14:44.351"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:14:44.623"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:14:44.719"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:14:46.270"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:14:46.562"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:14:46.564"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:14:46.567"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:14:46.568"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03T03:46:32.365Z"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03T03:46:32.455Z"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03T03:46:32.456Z"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03T03:46:32.641Z"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03T03:46:32.748Z"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03T03:46:34.373Z"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03T03:46:34.608Z"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03T03:46:34.609Z"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03T03:46:34.610Z"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03T03:46:34.611Z"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03T03:46:36.189Z"}
+{"level":"info","message":"Searching for foods:","searchExpression":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03T03:46:36.191Z"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03T03:46:37.895Z"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03T03:46:37.896Z"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03T03:46:38.208Z"}
+{"ingredient":"chicken breast","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03T03:46:38.210Z"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03T03:46:38.211Z"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03T03:46:38.568Z"}
+{"ingredient":"mixed greens","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03T03:46:38.569Z"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03T03:46:38.571Z"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03T03:46:38.944Z"}
+{"ingredient":"cherry tomatoes","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03T03:46:38.946Z"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03T03:46:38.946Z"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03T03:46:39.321Z"}
+{"ingredient":"cucumber","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03T03:46:39.322Z"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03T03:46:39.323Z"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03T03:46:39.710Z"}
+{"ingredient":"olive oil","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03T03:46:39.711Z"}
+{"calories":0,"level":"info","mealName":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03T03:46:39.712Z"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03T03:49:00.482Z"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03T03:49:00.509Z"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03T03:49:00.511Z"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03T03:49:00.721Z"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03T03:49:00.827Z"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:19:02.990"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:19:03.014"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:19:03.016"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:19:03.319"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:19:03.414"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:19:04.841"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:19:05.344"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:19:05.345"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:19:05.347"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:19:05.348"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:19:07.074"}
+{"level":"info","message":"Searching for foods:","searchExpression":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:19:07.075"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:19:08.884"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:19:08.886"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:19:09.246"}
+{"ingredient":"chicken breast","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:19:09.247"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:19:09.248"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:19:09.545"}
+{"ingredient":"mixed greens","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:19:09.546"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:19:09.547"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:19:10.005"}
+{"ingredient":"cherry tomatoes","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:19:10.006"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:19:10.007"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:19:10.308"}
+{"ingredient":"cucumber","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:19:10.309"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:19:10.310"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:19:10.613"}
+{"ingredient":"olive oil","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:19:10.614"}
+{"calories":0,"level":"info","mealName":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:19:10.615"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:21:20.095"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:21:20.121"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:21:20.123"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:21:20.349"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:21:20.453"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:21:22.066"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:21:22.222"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:21:22.224"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:21:22.226"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:21:22.228"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:21:24.745"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:21:24.791"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:21:24.794"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:21:25.011"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:21:25.109"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:21:27.431"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:21:28.775"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:21:28.776"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:21:28.777"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:21:28.778"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:21:30.351"}
+{"level":"info","message":"Searching for foods:","searchExpression":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:21:30.352"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:21:32.222"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:21:32.223"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:21:32.598"}
+{"ingredient":"chicken breast","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:21:32.599"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:21:32.600"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:21:32.897"}
+{"ingredient":"mixed greens","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:21:32.898"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:21:32.899"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:21:33.277"}
+{"ingredient":"cherry tomatoes","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:21:33.278"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:21:33.279"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:21:33.571"}
+{"ingredient":"cucumber","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:21:33.573"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:21:33.574"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:21:33.875"}
+{"ingredient":"olive oil","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:21:33.876"}
+{"calories":0,"level":"info","mealName":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:21:33.877"}
+{"level":"info","message":"Memory cache cleared","service":"meal-generator","timestamp":"2025-06-03 09:22:01.217"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:22:06.060"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:22:06.084"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:22:06.085"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:22:06.247"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:22:06.339"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:22:07.827"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:22:08.796"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:22:08.797"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:22:08.799"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:22:08.800"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:22:10.311"}
+{"level":"info","message":"Searching for foods:","searchExpression":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:22:10.312"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:22:11.884"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:22:11.890"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:22:12.256"}
+{"ingredient":"chicken breast","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:22:12.259"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:22:12.260"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:22:12.557"}
+{"ingredient":"mixed greens","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:22:12.559"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:22:12.560"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:22:12.842"}
+{"ingredient":"cherry tomatoes","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:22:12.843"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:22:12.844"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:22:13.143"}
+{"ingredient":"cucumber","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:22:13.144"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:22:13.145"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:22:13.449"}
+{"ingredient":"olive oil","level":"warn","message":"No nutrition data found for ingredient:","service":"meal-generator","timestamp":"2025-06-03 09:22:13.450"}
+{"calories":0,"level":"info","mealName":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 09:22:13.452"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:23:53.323"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:23:53.348"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:23:53.350"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:23:53.579"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:23:53.685"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:23:55.383"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:23:55.385"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:23:55.387"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:23:55.389"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:23:56.076"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:23:57.040"}
+{"level":"info","message":"Searching for foods:","searchExpression":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:23:57.042"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:24:00.241"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:24:00.273"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:24:00.274"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:24:00.473"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:24:00.571"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:24:02.218"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:24:03.039"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:24:03.040"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:24:03.042"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:24:03.045"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:24:04.469"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:24:04.470"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:24:05.889"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:24:06.266"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:24:06.564"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:24:06.865"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:24:07.165"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:24:07.466"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:24:07.765"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:24:08.064"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:24:08.363"}
+{"level":"error","message":"FatSecret API verification failed: No nutrition data received","service":"meal-generator","timestamp":"2025-06-03 09:24:08.664"}
+{"level":"error","message":"FatSecret API verification failed. Some features may not work correctly.","service":"meal-generator","timestamp":"2025-06-03 09:24:08.665"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:25:28.486"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:25:28.540"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:25:28.544"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:25:28.783"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:25:28.875"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:25:30.637"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:25:32.499"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:25:32.528"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:25:32.530"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:25:32.759"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:25:32.862"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:25:34.391"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:25:34.607"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:25:34.608"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:25:34.609"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:25:34.611"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:25:36.187"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:25:36.188"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:25:37.758"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:25:38.059"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:25:38.358"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:25:38.658"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:25:39.032"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:25:39.333"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:25:39.633"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:25:39.934"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:25:40.232"}
+{"level":"info","mealName":"Grilled Chicken Salad","message":"Successfully retrieved nutrition data:","nutrition":{"calories":0,"carbs":0,"fat":0,"fiber":0,"protein":0,"sodium":0,"sugar":0},"service":"meal-generator","timestamp":"2025-06-03 09:25:40.533"}
+{"level":"error","message":"FatSecret API verification failed: No nutrition data received","service":"meal-generator","timestamp":"2025-06-03 09:25:40.535"}
+{"level":"error","message":"FatSecret API verification failed. Some features may not work correctly.","service":"meal-generator","timestamp":"2025-06-03 09:25:40.536"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:25:51.390"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:25:51.420"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:25:51.422"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:25:51.646"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:25:51.746"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:25:53.366"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:25:53.440"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:25:53.442"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:25:53.443"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:25:53.445"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:25:55.032"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:25:55.033"}
+{"level":"info","message":"Initializing NutritionCache with Redis","service":"meal-generator","timestamp":"2025-06-03 09:38:49.674"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 09:38:49.677"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 09:38:49.679"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 09:38:49.895"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 09:38:50.004"}
+{"calories":302.5,"carbs":7.64,"fats":16.95,"food":"Grilled Chicken Salad","level":"info","message":"Nutritionix API connection verified successfully:","protein":31.03,"service":"meal-generator","timestamp":"2025-06-03 09:38:51.489"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 09:38:51.785"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 09:38:51.787"}
+{"level":"info","message":"Getting nutrition data for meal:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 09:38:51.788"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:38:51.790"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 09:38:53.290"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 09:38:53.291"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:38:54.793"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 09:38:55.100"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:38:55.467"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 09:38:55.768"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:38:56.069"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 09:38:56.437"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:38:56.750"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 09:38:57.054"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 09:38:57.410"}
+{"level":"info","mealName":"Grilled Chicken Salad","message":"Successfully retrieved nutrition data:","nutrition":{"calories":0,"carbs":0,"fat":0,"fiber":0,"protein":0,"sodium":0,"sugar":0},"service":"meal-generator","timestamp":"2025-06-03 09:38:57.718"}
+{"level":"error","message":"FatSecret API verification failed: No nutrition data received","service":"meal-generator","timestamp":"2025-06-03 09:38:57.719"}
+{"level":"error","message":"FatSecret API verification failed. Some features may not work correctly.","service":"meal-generator","timestamp":"2025-06-03 09:38:57.720"}
+{"level":"info","message":"Initializing NutritionCache with Redis and PostgreSQL","service":"meal-generator","timestamp":"2025-06-03 11:00:42.847"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 11:00:42.856"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 11:00:42.857"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 11:00:43.051"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 11:00:43.155"}
+{"error":"Request failed with status code 401","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","status":401,"timestamp":"2025-06-03 11:00:44.663"}
+{"level":"info","message":"Verifying FatSecret API connection as fallback...","service":"meal-generator","timestamp":"2025-06-03 11:00:44.664"}
+{"ingredients":"apple","level":"info","message":"Getting nutrition data from FatSecret:","name":"apple","service":"meal-generator","timestamp":"2025-06-03 11:00:44.665"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:00:44.667"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:00:44.668"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 11:00:44.812"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 11:00:44.813"}
+{"ingredients":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","level":"info","message":"Getting nutrition data from FatSecret:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 11:00:44.813"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 11:00:44.814"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:00:44.815"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:00:46.096"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:00:46.096"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:00:46.326"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 11:00:46.327"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:47.588"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:47.588"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:47.734"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:47.735"}
+{"calories":72,"food":"apple","level":"info","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 11:00:47.887"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 11:00:48.035"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 11:00:48.035"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:48.333"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:48.334"}
+{"level":"info","message":"Initializing NutritionCache with Redis and PostgreSQL","service":"meal-generator","timestamp":"2025-06-03 11:00:49.587"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 11:00:49.592"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 11:00:49.593"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 11:00:49.805"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 11:00:49.903"}
+{"error":"Request failed with status code 401","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","status":401,"timestamp":"2025-06-03 11:00:51.345"}
+{"level":"info","message":"Verifying FatSecret API connection as fallback...","service":"meal-generator","timestamp":"2025-06-03 11:00:51.346"}
+{"ingredients":"apple","level":"info","message":"Getting nutrition data from FatSecret:","name":"apple","service":"meal-generator","timestamp":"2025-06-03 11:00:51.348"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:00:51.349"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:00:51.350"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 11:00:51.795"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 11:00:51.796"}
+{"ingredients":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","level":"info","message":"Getting nutrition data from FatSecret:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 11:00:51.796"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 11:00:51.797"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:00:51.798"}
+{"level":"info","message":"Initializing NutritionCache with Redis and PostgreSQL","service":"meal-generator","timestamp":"2025-06-03 11:00:54.028"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 11:00:54.035"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 11:00:54.037"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 11:00:54.227"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 11:00:54.315"}
+{"error":"Request failed with status code 401","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","status":401,"timestamp":"2025-06-03 11:00:55.846"}
+{"level":"info","message":"Verifying FatSecret API connection as fallback...","service":"meal-generator","timestamp":"2025-06-03 11:00:55.847"}
+{"ingredients":"apple","level":"info","message":"Getting nutrition data from FatSecret:","name":"apple","service":"meal-generator","timestamp":"2025-06-03 11:00:55.849"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:00:55.850"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:00:55.851"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 11:00:56.068"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 11:00:56.068"}
+{"ingredients":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","level":"info","message":"Getting nutrition data from FatSecret:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 11:00:56.069"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 11:00:56.071"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:00:56.072"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:00:57.344"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:00:57.345"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:00:57.499"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 11:00:57.499"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:58.842"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:58.843"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:58.915"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:58.916"}
+{"calories":72,"food":"apple","level":"info","message":"FatSecret API connection verified successfully:","service":"meal-generator","timestamp":"2025-06-03 11:00:59.149"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 11:00:59.216"}
+{"level":"info","message":"Searching for foods:","searchExpression":"mixed greens","service":"meal-generator","timestamp":"2025-06-03 11:00:59.217"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:59.516"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:00:59.517"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 11:00:59.818"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cherry tomatoes","service":"meal-generator","timestamp":"2025-06-03 11:00:59.819"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:01:00.118"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:01:00.119"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 11:01:00.416"}
+{"level":"info","message":"Searching for foods:","searchExpression":"cucumber","service":"meal-generator","timestamp":"2025-06-03 11:01:00.416"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:01:00.715"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:01:00.715"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 11:01:01.014"}
+{"level":"info","message":"Searching for foods:","searchExpression":"olive oil","service":"meal-generator","timestamp":"2025-06-03 11:01:01.015"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:01:01.317"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:01:01.317"}
+{"level":"info","mealName":"Grilled Chicken Salad","message":"FatSecret API connection verified successfully:","nutrition":{"calories":368,"macros":{"carbs_g":12.39,"fats_g":21.46,"fiber_g":3.6,"protein_g":32.04,"sugars_g":6.15},"minerals":{"calcium_mg":0,"iron_mg":0,"potassium_mg":0,"sodium_mg":420},"vitamins":{"vitamin_A_mcg":0,"vitamin_C_mg":0}},"service":"meal-generator","timestamp":"2025-06-03 11:01:01.617"}
+{"level":"info","message":"Initializing NutritionCache with Redis and PostgreSQL","service":"meal-generator","timestamp":"2025-06-03 11:01:16.062"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 11:01:16.172"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 11:01:16.174"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 11:01:16.378"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 11:01:16.483"}
+{"error":"Request failed with status code 401","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","status":401,"timestamp":"2025-06-03 11:01:17.983"}
+{"level":"info","message":"Verifying FatSecret API connection as fallback...","service":"meal-generator","timestamp":"2025-06-03 11:01:17.985"}
+{"ingredients":"apple","level":"info","message":"Getting nutrition data from FatSecret:","name":"apple","service":"meal-generator","timestamp":"2025-06-03 11:01:17.986"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:01:17.988"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:01:17.989"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 11:01:18.189"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 11:01:18.190"}
+{"ingredients":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","level":"info","message":"Getting nutrition data from FatSecret:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 11:01:18.191"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 11:01:18.193"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:01:18.194"}
+{"level":"info","message":"Initializing NutritionCache with Redis and PostgreSQL","service":"meal-generator","timestamp":"2025-06-03 11:01:19.735"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 11:01:19.770"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 11:01:19.772"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 11:01:19.949"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 11:01:20.060"}
+{"error":"Request failed with status code 401","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","status":401,"timestamp":"2025-06-03 11:01:21.571"}
+{"level":"info","message":"Verifying FatSecret API connection as fallback...","service":"meal-generator","timestamp":"2025-06-03 11:01:21.573"}
+{"ingredients":"apple","level":"info","message":"Getting nutrition data from FatSecret:","name":"apple","service":"meal-generator","timestamp":"2025-06-03 11:01:21.575"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:01:21.577"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:01:21.578"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 11:01:22.027"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 11:01:22.029"}
+{"ingredients":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","level":"info","message":"Getting nutrition data from FatSecret:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 11:01:22.030"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 11:01:22.031"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:01:22.032"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:01:23.073"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:01:23.074"}
+{"level":"info","message":"Initializing NutritionCache with Redis and PostgreSQL","service":"meal-generator","timestamp":"2025-06-03 11:01:24.554"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 11:01:24.591"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 11:01:24.595"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 11:01:24.826"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 11:01:24.925"}
+{"error":"Request failed with status code 401","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","status":401,"timestamp":"2025-06-03 11:01:26.384"}
+{"level":"info","message":"Verifying FatSecret API connection as fallback...","service":"meal-generator","timestamp":"2025-06-03 11:01:26.386"}
+{"ingredients":"apple","level":"info","message":"Getting nutrition data from FatSecret:","name":"apple","service":"meal-generator","timestamp":"2025-06-03 11:01:26.388"}
+{"key":"meal-generatornutrition:apple","level":"info","message":"Attempting to get nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.389"}
+{"key":"meal-generatornutrition:apple","level":"info","message":"Cache miss, checking database:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.391"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:apple","level":"error","message":"Error retrieving data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.536"}
+{"count":1,"level":"info","message":"Getting batch nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.538"}
+{"key":"meal-generatornutrition:apple","level":"info","message":"Attempting to get nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.540"}
+{"key":"meal-generatornutrition:apple","level":"info","message":"Cache miss, checking database:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.541"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:apple","level":"error","message":"Error retrieving data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.741"}
+{"found":0,"level":"info","message":"Batch nutrition retrieval complete:","missing":1,"service":"meal-generator","timestamp":"2025-06-03 11:01:26.744"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:01:26.746"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:01:26.748"}
+{"level":"info","message":"Database synchronized successfully","service":"meal-generator","timestamp":"2025-06-03 11:01:26.818"}
+{"level":"info","message":"Verifying FatSecret API connection...","service":"meal-generator","timestamp":"2025-06-03 11:01:26.819"}
+{"ingredients":"chicken breast, mixed greens, cherry tomatoes, cucumber, olive oil","level":"info","message":"Getting nutrition data from FatSecret:","name":"Grilled Chicken Salad","service":"meal-generator","timestamp":"2025-06-03 11:01:26.820"}
+{"key":"meal-generatornutrition:grilled chicken salad","level":"info","message":"Attempting to get nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.821"}
+{"key":"meal-generatornutrition:grilled chicken salad","level":"info","message":"Cache miss, checking database:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.822"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:grilled chicken salad","level":"error","message":"Error retrieving data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.896"}
+{"count":5,"level":"info","message":"Getting batch nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.898"}
+{"key":"meal-generatornutrition:chicken breast","level":"info","message":"Attempting to get nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.900"}
+{"key":"meal-generatornutrition:mixed greens","level":"info","message":"Attempting to get nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.902"}
+{"key":"meal-generatornutrition:cherry tomatoes","level":"info","message":"Attempting to get nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.903"}
+{"key":"meal-generatornutrition:cucumber","level":"info","message":"Attempting to get nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.904"}
+{"key":"meal-generatornutrition:olive oil","level":"info","message":"Attempting to get nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.905"}
+{"key":"meal-generatornutrition:chicken breast","level":"info","message":"Cache miss, checking database:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.906"}
+{"key":"meal-generatornutrition:mixed greens","level":"info","message":"Cache miss, checking database:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.908"}
+{"key":"meal-generatornutrition:cherry tomatoes","level":"info","message":"Cache miss, checking database:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.909"}
+{"key":"meal-generatornutrition:cucumber","level":"info","message":"Cache miss, checking database:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.911"}
+{"key":"meal-generatornutrition:olive oil","level":"info","message":"Cache miss, checking database:","service":"meal-generator","timestamp":"2025-06-03 11:01:26.912"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:chicken breast","level":"error","message":"Error retrieving data:","service":"meal-generator","timestamp":"2025-06-03 11:01:27.039"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:mixed greens","level":"error","message":"Error retrieving data:","service":"meal-generator","timestamp":"2025-06-03 11:01:27.053"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:cherry tomatoes","level":"error","message":"Error retrieving data:","service":"meal-generator","timestamp":"2025-06-03 11:01:27.127"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:cucumber","level":"error","message":"Error retrieving data:","service":"meal-generator","timestamp":"2025-06-03 11:01:27.131"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:olive oil","level":"error","message":"Error retrieving data:","service":"meal-generator","timestamp":"2025-06-03 11:01:27.209"}
+{"found":0,"level":"info","message":"Batch nutrition retrieval complete:","missing":5,"service":"meal-generator","timestamp":"2025-06-03 11:01:27.210"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 11:01:27.215"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:01:27.217"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:01:28.321"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:01:28.322"}
+{"level":"info","message":"Successfully obtained FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:01:28.765"}
+{"level":"info","message":"Searching for foods:","searchExpression":"chicken breast","service":"meal-generator","timestamp":"2025-06-03 11:01:28.766"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:01:29.818"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:01:29.819"}
+{"key":"meal-generatornutrition:apple","level":"info","message":"Setting nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:30.116"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:01:30.192"}
+{"count":3,"level":"info","message":"Found foods:","service":"meal-generator","timestamp":"2025-06-03 11:01:30.193"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:apple","level":"error","message":"Error storing data:","service":"meal-generator","timestamp":"2025-06-03 11:01:30.209"}
+{"error":"relation \"nutrition_data\" does not exist","level":"error","meal":"apple","message":"Error in getMealNutritionData:","service":"meal-generator","timestamp":"2025-06-03 11:01:30.210"}
+{"fatSecretError":"FatSecret API test returned no data","level":"error","message":"Both Nutritionix and FatSecret API connections failed:","nutritionixError":"Request failed with status code 401","service":"meal-generator","timestamp":"2025-06-03 11:01:30.211"}
+{"error":"All nutrition API services are unavailable","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","timestamp":"2025-06-03 11:01:30.212"}
+{"key":"meal-generatornutrition:chicken breast","level":"info","message":"Setting nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:30.494"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:chicken breast","level":"error","message":"Error storing data:","service":"meal-generator","timestamp":"2025-06-03 11:01:30.640"}
+{"error":"relation \"nutrition_data\" does not exist","level":"error","meal":"Grilled Chicken Salad","message":"Error in getMealNutritionData:","service":"meal-generator","timestamp":"2025-06-03 11:01:30.641"}
+{"level":"error","message":"FatSecret API verification failed: No nutrition data received","service":"meal-generator","timestamp":"2025-06-03 11:01:30.642"}
+{"level":"error","message":"FatSecret API verification failed. Some features may not work correctly.","service":"meal-generator","timestamp":"2025-06-03 11:01:30.643"}
+{"level":"info","message":"Initializing NutritionCache with Redis and PostgreSQL","service":"meal-generator","timestamp":"2025-06-03 11:01:46.146"}
+{"clientId":"f6fc...","level":"info","message":"FatSecretService initialized with client ID:","service":"meal-generator","timestamp":"2025-06-03 11:01:46.180"}
+{"fatSecretClientId":"Set","fatSecretClientSecret":"Set","level":"info","message":"Environment variables loaded:","service":"meal-generator","timestamp":"2025-06-03 11:01:46.181"}
+{"level":"info","message":"Verifying Nutritionix API connection...","service":"meal-generator","timestamp":"2025-06-03 11:01:46.376"}
+{"level":"info","message":"Server running on port 3000","service":"meal-generator","timestamp":"2025-06-03 11:01:46.466"}
+{"error":"Request failed with status code 401","level":"error","message":"Failed to verify Nutritionix API connection:","service":"meal-generator","status":401,"timestamp":"2025-06-03 11:01:47.889"}
+{"level":"info","message":"Verifying FatSecret API connection as fallback...","service":"meal-generator","timestamp":"2025-06-03 11:01:47.891"}
+{"ingredients":"apple","level":"info","message":"Getting nutrition data from FatSecret:","name":"apple","service":"meal-generator","timestamp":"2025-06-03 11:01:47.893"}
+{"key":"meal-generatornutrition:apple","level":"info","message":"Attempting to get nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:47.895"}
+{"key":"meal-generatornutrition:apple","level":"info","message":"Cache miss, checking database:","service":"meal-generator","timestamp":"2025-06-03 11:01:47.897"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:apple","level":"error","message":"Error retrieving data:","service":"meal-generator","timestamp":"2025-06-03 11:01:48.015"}
+{"count":1,"level":"info","message":"Getting batch nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:48.018"}
+{"key":"meal-generatornutrition:apple","level":"info","message":"Attempting to get nutrition data:","service":"meal-generator","timestamp":"2025-06-03 11:01:48.020"}
+{"key":"meal-generatornutrition:apple","level":"info","message":"Cache miss, checking database:","service":"meal-generator","timestamp":"2025-06-03 11:01:48.021"}
+{"error":"relation \"nutrition_data\" does not exist","key":"meal-generatornutrition:apple","level":"error","message":"Error retrieving data:","service":"meal-generator","timestamp":"2025-06-03 11:01:48.177"}
+{"found":0,"level":"info","message":"Batch nutrition retrieval complete:","missing":1,"service":"meal-generator","timestamp":"2025-06-03 11:01:48.178"}
+{"level":"info","message":"Searching for foods:","searchExpression":"apple","service":"meal-generator","timestamp":"2025-06-03 11:01:48.180"}
+{"level":"info","message":"Requesting new FatSecret access token","service":"meal-generator","timestamp":"2025-06-03 11:01:48.181"}
