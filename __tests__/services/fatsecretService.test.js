@@ -52,12 +52,12 @@ describe('FatSecret Service', () => {
 
       const result = await fatSecretService.getNutritionData('apple');
       expect(result).toBe(mockData);
-      expect(axios.post).not.toHaveBeenCalled();
+      expect(axios.get).not.toHaveBeenCalled();
     });
 
     it('should fetch new data if not cached', async () => {
       const mockData = { food_response: [] };
-      axios.post.mockResolvedValueOnce({ data: mockData });
+      axios.get.mockResolvedValueOnce({ data: mockData });
 
       const result = await fatSecretService.getNutritionData('apple');
       expect(result).toBe(mockData);
@@ -65,7 +65,7 @@ describe('FatSecret Service', () => {
     });
 
     it('should handle API errors gracefully', async () => {
-      axios.post.mockRejectedValueOnce(new Error('API Error'));
+      axios.get.mockRejectedValueOnce(new Error('API Error'));
 
       await expect(fatSecretService.getNutritionData('apple'))
         .rejects
@@ -114,4 +114,4 @@ describe('FatSecret Service', () => {
       expect(fatSecretService.extractTotalNutrition({})).toBeNull();
     });
   });
-}); 
+});

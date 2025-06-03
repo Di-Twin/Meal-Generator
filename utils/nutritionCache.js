@@ -1,8 +1,12 @@
-const NodeCache = require('node-cache');
 const { DataTypes } = require('sequelize');
 const sequelize = require('../Database/models/postgres/connection');
 const logger = require('./logger');
+const { setCache, getCache, delCache } = require('../services/redisService');
+const config = require('../config');
+const { Op } = require('sequelize');
+const NutritionDataStandardizer = require('./nutritionDataStandardizer');
 
+// Define the Nutrition model
 const Nutrition = sequelize.define('Nutrition', {
     id: {
         type: DataTypes.UUID,
@@ -25,6 +29,14 @@ const Nutrition = sequelize.define('Nutrition', {
     totalNutrition: {
         type: DataTypes.JSONB,
         allowNull: true
+    },
+    lastUpdated: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
+    },
+    hitCount: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0
     }
 }, {
     tableName: 'nutrition_data',
@@ -32,107 +44,214 @@ const Nutrition = sequelize.define('Nutrition', {
     indexes: [
         {
             fields: ['normalizedDescription']
+        },
+        {
+            fields: ['lastUpdated']
         }
     ]
 });
 
 class NutritionCache {
     constructor() {
-        logger.info('Initializing NutritionCache with 24-hour TTL');
-        this.cache = new NodeCache({ stdTTL: 24 * 60 * 60 });
+        this.ttl = config.redis.ttl || 86400; // Default 24 hours
+        this.prefix = `${config.cache.prefix}nutrition:`;
+        this.maxCacheSize = 1000; // Maximum number of items in cache
+        this.cleanupInterval = 3600000; // Cleanup every hour
+        
+        // Initialize cleanup interval
+        setInterval(() => this.cleanup(), this.cleanupInterval);
     }
 
     getKey(foodDescription) {
-        const key = foodDescription.toLowerCase().trim().replace(/\s+/g, ' ');
-        logger.debug('Generated cache key:', { original: foodDescription, normalized: key });
-        return key;
+        return `${this.prefix}${foodDescription.toLowerCase().trim().replace(/\s+/g, ' ')}`;
     }
 
     async get(foodDescription) {
         const key = this.getKey(foodDescription);
-        logger.info('Attempting to get nutrition data:', { key });
         
-        const cachedData = this.cache.get(key);
-        if (cachedData) {
-            logger.info('Cache hit:', { key });
-            return cachedData;
-        }
-        
-        logger.info('Cache miss, checking database:', { key });
         try {
+            // Try Redis cache first
+            const cachedData = await getCache(key);
+            if (cachedData) {
+                // Update hit count in database asynchronously
+                this.updateHitCount(foodDescription).catch(err => 
+                    logger.error('Error updating hit count:', { error: err.message })
+                );
+                return cachedData;
+            }
+            
+            // If not in cache, check database
             const dbData = await Nutrition.findOne({
-                where: { normalizedDescription: key }
+                where: { normalizedDescription: foodDescription.toLowerCase().trim() }
             });
             
             if (dbData) {
-                logger.info('Database hit:', { key });
                 const nutritionData = dbData.nutritionData;
                 
-                logger.debug('Updating cache with database data:', { key });
-                this.cache.set(key, nutritionData);
+                // Update cache asynchronously
+                this.updateCache(key, nutritionData).catch(err => 
+                    logger.error('Error updating cache:', { error: err.message })
+                );
+                
+                // Update hit count and last accessed
+                await this.updateHitCount(foodDescription);
                 
                 return nutritionData;
             }
             
-            logger.info('No data found in cache or database:', { key });
+            return null;
         } catch (error) {
-            logger.error('Error retrieving from database:', { error: error.message, key });
+            logger.error('Error retrieving data:', { error: error.message, key });
+            return null;
         }
-        
-        return null;
     }
 
-    async set(foodDescription, nutritionData, totalNutrition = null) {
+    async set(foodDescription, nutritionData, source = 'nutritionix') {
         const key = this.getKey(foodDescription);
-        logger.info('Setting nutrition data:', { key });
-        
-        logger.debug('Setting in-memory cache:', { key });
-        this.cache.set(key, nutritionData);
         
         try {
-            logger.debug('Storing in database:', { key });
-            await Nutrition.findOrCreate({
-                where: { normalizedDescription: key },
-                defaults: {
-                    foodDescription: foodDescription,
-                    normalizedDescription: key,
-                    nutritionData: nutritionData,
-                    totalNutrition: totalNutrition
-                }
+            // Standardize the nutrition data
+            const standardizedData = NutritionDataStandardizer.standardizeNutritionData(nutritionData, source);
+            
+            // Validate the standardized data
+            NutritionDataStandardizer.validateNutritionData(standardizedData);
+            
+            // Round nutrition values
+            const roundedData = NutritionDataStandardizer.roundNutritionValues(standardizedData);
+            
+            // Store in Redis cache
+            await setCache(key, roundedData, this.ttl);
+            
+            // Store in database
+            await Nutrition.upsert({
+                foodDescription: foodDescription,
+                normalizedDescription: foodDescription.toLowerCase().trim(),
+                nutritionData: roundedData,
+                lastUpdated: new Date(),
+                hitCount: 0
             });
-            logger.info('Successfully stored nutrition data:', { key });
+
+            logger.debug('Stored nutrition data:', {
+                food: foodDescription,
+                calories: roundedData.calories,
+                macros: roundedData.macros
+            });
+            
+            return roundedData;
         } catch (error) {
-            logger.error('Error storing in database:', { error: error.message, key });
+            logger.error('Error storing nutrition data:', { 
+                error: error.message,
+                food: foodDescription,
+                source: source
+            });
+            throw error;
         }
     }
 
-    // Get nutrition data for multiple ingredients
+    async updateHitCount(foodDescription) {
+        try {
+            await Nutrition.increment('hitCount', {
+                where: { normalizedDescription: foodDescription.toLowerCase().trim() }
+            });
+        } catch (error) {
+            logger.error('Error updating hit count:', { error: error.message });
+        }
+    }
+
+    async updateCache(key, data) {
+        try {
+            await setCache(key, data, this.ttl);
+        } catch (error) {
+            logger.error('Error updating cache:', { error: error.message });
+        }
+    }
+
     async getBatchNutrition(ingredients) {
-        logger.info('Getting batch nutrition data:', { count: ingredients.length });
         const results = {};
         const missingIngredients = [];
 
-        for (const ingredient of ingredients) {
-            logger.debug('Processing ingredient:', { ingredient });
-            const cachedData = await this.get(ingredient);
-            if (cachedData) {
-                logger.debug('Found data for ingredient:', { ingredient });
-                results[ingredient] = cachedData;
+        // Try to get all from cache first
+        const cachePromises = ingredients.map(ingredient => this.get(ingredient));
+        const cacheResults = await Promise.all(cachePromises);
+
+        ingredients.forEach((ingredient, index) => {
+            if (cacheResults[index]) {
+                results[ingredient] = cacheResults[index];
             } else {
-                logger.debug('No data found for ingredient:', { ingredient });
                 missingIngredients.push(ingredient);
             }
-        }
-
-        logger.info('Batch nutrition retrieval complete:', {
-            found: Object.keys(results).length,
-            missing: missingIngredients.length
         });
 
         return {
             cached: results,
             missing: missingIngredients
         };
+    }
+
+    async cleanup() {
+        try {
+            // Remove old entries from database
+            const oldDate = new Date();
+            oldDate.setDate(oldDate.getDate() - 30); // Remove entries older than 30 days
+            
+            await Nutrition.destroy({
+                where: {
+                    lastUpdated: {
+                        [Op.lt]: oldDate
+                    },
+                    hitCount: {
+                        [Op.lt]: 5 // Remove entries with less than 5 hits
+                    }
+                }
+            });
+        } catch (error) {
+            logger.error('Error during cache cleanup:', { error: error.message });
+        }
+    }
+
+    async clear(foodDescription = null) {
+        try {
+            if (foodDescription) {
+                const key = this.getKey(foodDescription);
+                await delCache(key);
+                await Nutrition.destroy({
+                    where: { normalizedDescription: foodDescription.toLowerCase().trim() }
+                });
+            } else {
+                // Clear all nutrition cache
+                const pattern = `${this.prefix}*`;
+                await delCache(pattern);
+                await Nutrition.destroy({ where: {} });
+            }
+        } catch (error) {
+            logger.error('Error clearing cache:', { error: error.message });
+            throw error;
+        }
+    }
+
+    async clearAll() {
+        try {
+            // Clear all Redis cache entries
+            const pattern = `${this.prefix}*`;
+            await delCache(pattern);
+            
+            // Clear all database entries
+            await Nutrition.destroy({
+                where: {},
+                force: true // This will permanently delete all records
+            });
+            
+            // Reset the auto-increment counter if using PostgreSQL
+            await sequelize.query('TRUNCATE TABLE nutrition_data RESTART IDENTITY CASCADE');
+            
+            return {
+                success: true,
+                message: 'Successfully cleared all cache and database data'
+            };
+        } catch (error) {
+            logger.error('Error during complete cleanup:', { error: error.message });
+            throw new Error(`Failed to clear all data: ${error.message}`);
+        }
     }
 }
 

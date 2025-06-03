@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\logs\\.1d4d700f14c07011ea0f184333fff8db46c56e7d-audit.json",
+    "files": [
+        {
+            "date": 1748870033920,
+            "name": "C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\logs\\2025-06-02-error.log",
+            "hash": "8e50d1478c716fe0066abf01cc4e02b72154e81addddbe3cb91eab67c4b69884"
+        },
+        {
+            "date": 1748920985492,
+            "name": "C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\logs\\2025-06-03-error.log",
+            "hash": "407cbdd9016bfafb3af3593a1a78c54dd4ec9081eda45cb2ffc7d4a9e48b95f1"
+        }
+    ],
+    "hashType": "sha256"
+}

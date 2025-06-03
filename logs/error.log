@@ -214,3 +214,532 @@
 2025-05-31 12:46:45 error: Error getting meal nutrition data: {"meal":"Grilled Chicken Salad","error":"Invalid FatSecret scope. Please check the API documentation for correct scope format."}
 2025-05-31 12:46:45 error: FatSecret API verification failed: No nutrition data received 
 2025-05-31 12:46:45 error: FatSecret API verification failed. Some features may not work correctly. 
+2025-06-02 13:16:14 error: Invalid FatSecret scope: Request failed with status code 400 {"status":400,"data":{"error":"invalid_scope"},"clientIdPrefix":"f6fc..."}
+2025-06-02 13:16:14 error: Error getting meal nutrition data: {"meal":"Grilled Chicken Salad","error":"Invalid FatSecret scope. Please check the API documentation for correct scope format."}
+2025-06-02 13:16:14 error: FatSecret API verification failed: No nutrition data received 
+2025-06-02 13:16:14 error: FatSecret API verification failed. Some features may not work correctly. 
+2025-06-02 13:16:35 error: FatSecret API verification failed: No nutrition data received 
+2025-06-02 13:16:35 error: FatSecret API verification failed. Some features may not work correctly. 
+2025-06-02 13:22:07 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:22:07 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:22:07 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:22:08 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:22:08 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:22:08 error: FatSecret API verification failed: No nutrition data received 
+2025-06-02 13:22:08 error: FatSecret API verification failed. Some features may not work correctly. 
+2025-06-02 13:23:47 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:23:47 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:23:47 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:23:48 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:23:48 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:23:48 error: FatSecret API verification failed: No nutrition data received 
+2025-06-02 13:23:48 error: FatSecret API verification failed. Some features may not work correctly. 
+2025-06-02 13:26:04 error: Failed to fix JSON: {"error":"Unexpected end of JSON input"}
+2025-06-02 13:31:43 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:31:43 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:31:43 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:31:44 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:31:44 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:31:44 error: FatSecret API verification failed: No nutrition data received 
+2025-06-02 13:31:44 error: FatSecret API verification failed. Some features may not work correctly. 
+2025-06-02 13:33:46 error: Failed to fix JSON: {"error":"Unexpected end of JSON input","position":"unknown","context":"unknown"}
+2025-06-02 13:38:43 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:38:43 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:38:44 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:38:44 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:38:44 error: FatSecret API returned an error: {"error":{"code":21,"message":"Invalid IP address detected:  '110.224.94.142'"}}
+2025-06-02 13:38:44 error: FatSecret API verification failed: No nutrition data received 
+2025-06-02 13:38:44 error: FatSecret API verification failed. Some features may not work correctly. 
+2025-06-02 17:55:09 error: Error getting meal nutrition data: {"meal":"Grilled Chicken Salad","error":"this.extractIngredientsFromMeal is not a function"}
+2025-06-02 17:55:09 error: FatSecret API verification failed: No nutrition data received 
+2025-06-02 17:55:09 error: FatSecret API verification failed. Some features may not work correctly. 
+2025-06-03 10:31:26 ERROR Error retrieving data:
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "stack": "Error\n    at Query.run (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.select (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:407:12)\n    at async Nutrition.findAll (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\model.js:1140:21)\n    at async Nutrition.findOne (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\model.js:1240:12)\n    at async NutritionCache.get (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:104:28)\n    at async NutritionCache.getBatchNutrition (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:213:36)\n    at async FatSecretService.getMealNutritionData (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:274:41)\n    at async FatSecretService.verifyConnection (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:64:35)",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:31:26 ERROR Error processing ingredient:
+{
+  "ingredient": "chicken breast",
+  "error": "Failed to retrieve nutrition data",
+  "stack": "Error: Failed to retrieve nutrition data\n    at NutritionCache.get (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:132:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async NutritionCache.getBatchNutrition (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:213:36)\n    at async FatSecretService.getMealNutritionData (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:274:41)\n    at async FatSecretService.verifyConnection (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:64:35)\n    at async C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\app.js:37:35"
+}
+2025-06-03 10:31:26 ERROR Error retrieving data:
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "stack": "Error\n    at Query.run (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.select (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:407:12)\n    at async Nutrition.findAll (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\model.js:1140:21)\n    at async Nutrition.findOne (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\model.js:1240:12)\n    at async NutritionCache.get (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:104:28)\n    at async NutritionCache.getBatchNutrition (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:213:36)\n    at async FatSecretService.getMealNutritionData (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:274:41)\n    at async FatSecretService.verifyConnection (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:64:35)",
+  "key": "meal-generatornutrition:mixed greens"
+}
+2025-06-03 10:31:26 ERROR Error processing ingredient:
+{
+  "ingredient": "mixed greens",
+  "error": "Failed to retrieve nutrition data",
+  "stack": "Error: Failed to retrieve nutrition data\n    at NutritionCache.get (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:132:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async NutritionCache.getBatchNutrition (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:213:36)\n    at async FatSecretService.getMealNutritionData (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:274:41)\n    at async FatSecretService.verifyConnection (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:64:35)\n    at async C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\app.js:37:35"
+}
+2025-06-03 10:31:26 ERROR Error retrieving data:
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "stack": "Error\n    at Query.run (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.select (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:407:12)\n    at async Nutrition.findAll (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\model.js:1140:21)\n    at async Nutrition.findOne (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\model.js:1240:12)\n    at async NutritionCache.get (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:104:28)\n    at async NutritionCache.getBatchNutrition (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:213:36)\n    at async FatSecretService.getMealNutritionData (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:274:41)\n    at async FatSecretService.verifyConnection (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:64:35)",
+  "key": "meal-generatornutrition:cherry tomatoes"
+}
+2025-06-03 10:31:26 ERROR Error processing ingredient:
+{
+  "ingredient": "cherry tomatoes",
+  "error": "Failed to retrieve nutrition data",
+  "stack": "Error: Failed to retrieve nutrition data\n    at NutritionCache.get (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:132:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async NutritionCache.getBatchNutrition (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:213:36)\n    at async FatSecretService.getMealNutritionData (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:274:41)\n    at async FatSecretService.verifyConnection (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:64:35)\n    at async C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\app.js:37:35"
+}
+2025-06-03 10:31:27 ERROR Error retrieving data:
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "stack": "Error\n    at Query.run (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.select (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:407:12)\n    at async Nutrition.findAll (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\model.js:1140:21)\n    at async Nutrition.findOne (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\model.js:1240:12)\n    at async NutritionCache.get (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:104:28)\n    at async NutritionCache.getBatchNutrition (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:213:36)\n    at async FatSecretService.getMealNutritionData (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:274:41)\n    at async FatSecretService.verifyConnection (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:64:35)",
+  "key": "meal-generatornutrition:cucumber"
+}
+2025-06-03 10:31:27 ERROR Error processing ingredient:
+{
+  "ingredient": "cucumber",
+  "error": "Failed to retrieve nutrition data",
+  "stack": "Error: Failed to retrieve nutrition data\n    at NutritionCache.get (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:132:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async NutritionCache.getBatchNutrition (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:213:36)\n    at async FatSecretService.getMealNutritionData (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:274:41)\n    at async FatSecretService.verifyConnection (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:64:35)\n    at async C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\app.js:37:35"
+}
+2025-06-03 10:31:27 ERROR Error retrieving data:
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "stack": "Error\n    at Query.run (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.select (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:407:12)\n    at async Nutrition.findAll (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\model.js:1140:21)\n    at async Nutrition.findOne (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\node_modules\\sequelize\\lib\\model.js:1240:12)\n    at async NutritionCache.get (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:104:28)\n    at async NutritionCache.getBatchNutrition (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:213:36)\n    at async FatSecretService.getMealNutritionData (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:274:41)\n    at async FatSecretService.verifyConnection (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:64:35)",
+  "key": "meal-generatornutrition:olive oil"
+}
+2025-06-03 10:31:27 ERROR Error processing ingredient:
+{
+  "ingredient": "olive oil",
+  "error": "Failed to retrieve nutrition data",
+  "stack": "Error: Failed to retrieve nutrition data\n    at NutritionCache.get (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:132:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async NutritionCache.getBatchNutrition (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\utils\\nutritionCache.js:213:36)\n    at async FatSecretService.getMealNutritionData (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:274:41)\n    at async FatSecretService.verifyConnection (C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\services\\fatsecretService.js:64:35)\n    at async C:\\Users\\Harish Karthick S\\Documents\\Kalvium\\Semester-4\\Startup\\Di-Twin\\Meal-Generator\\Meal-Generator\\app.js:37:35"
+}
+2025-06-03 10:31:27 ERROR FatSecret API verification failed:
+{
+  "error": "Cannot read properties of undefined (reading 'calories')"
+}
+2025-06-03 10:31:27 ERROR FatSecret API verification failed. Some features may not work correctly.
+2025-06-03 10:32:03 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:32:03 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:mixed greens"
+}
+2025-06-03 10:32:03 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cherry tomatoes"
+}
+2025-06-03 10:32:03 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cucumber"
+}
+2025-06-03 10:32:03 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:olive oil"
+}
+2025-06-03 10:32:07 [31merror[39m [31mError storing data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:32:07 [31merror[39m [31mError in getMealNutritionData:[39m
+{
+  "service": "meal-generator",
+  "meal": "Grilled Chicken Salad",
+  "error": "relation \"nutrition_data\" does not exist"
+}
+2025-06-03 10:32:07 [31merror[39m [31mFatSecret API verification failed:[39m
+{
+  "error": "Cannot read properties of undefined (reading 'calories')"
+}
+2025-06-03 10:32:07 [31merror[39m [31mFatSecret API verification failed. Some features may not work correctly.[39m
+2025-06-03 10:33:02 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:33:02 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:mixed greens"
+}
+2025-06-03 10:33:02 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cherry tomatoes"
+}
+2025-06-03 10:33:02 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cucumber"
+}
+2025-06-03 10:33:02 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:olive oil"
+}
+2025-06-03 10:33:06 [31merror[39m [31mError storing data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:33:06 [31merror[39m [31mError in getMealNutritionData:[39m
+{
+  "service": "meal-generator",
+  "meal": "Grilled Chicken Salad",
+  "error": "relation \"nutrition_data\" does not exist"
+}
+2025-06-03 10:33:06 [31merror[39m [31mFatSecret API verification failed:[39m
+{
+  "error": "Cannot read properties of undefined (reading 'calories')"
+}
+2025-06-03 10:33:06 [31merror[39m [31mFatSecret API verification failed. Some features may not work correctly.[39m
+2025-06-03 10:35:49 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:35:49 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:mixed greens"
+}
+2025-06-03 10:35:49 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cherry tomatoes"
+}
+2025-06-03 10:35:49 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cucumber"
+}
+2025-06-03 10:35:49 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:olive oil"
+}
+2025-06-03 10:35:53 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:35:53 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:mixed greens"
+}
+2025-06-03 10:35:53 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cherry tomatoes"
+}
+2025-06-03 10:35:53 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cucumber"
+}
+2025-06-03 10:35:53 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:olive oil"
+}
+2025-06-03 10:35:56 [31merror[39m [31mError storing data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:35:56 [31merror[39m [31mError in getMealNutritionData:[39m
+{
+  "service": "meal-generator",
+  "meal": "Grilled Chicken Salad",
+  "error": "relation \"nutrition_data\" does not exist"
+}
+2025-06-03 10:35:56 [31merror[39m [31mFatSecret API verification failed:[39m
+{
+  "error": "Cannot read properties of undefined (reading 'calories')"
+}
+2025-06-03 10:35:56 [31merror[39m [31mFatSecret API verification failed. Some features may not work correctly.[39m
+2025-06-03 10:36:19 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:36:19 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:mixed greens"
+}
+2025-06-03 10:36:19 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cherry tomatoes"
+}
+2025-06-03 10:36:19 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cucumber"
+}
+2025-06-03 10:36:19 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:olive oil"
+}
+2025-06-03 10:43:02 [31merror[39m [31mFailed to verify Nutritionix API connection:[39m
+{
+  "service": "meal-generator",
+  "error": "Request failed with status code 401",
+  "status": 401
+}
+2025-06-03 10:43:03 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:apple"
+}
+2025-06-03 10:43:03 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:43:03 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:mixed greens"
+}
+2025-06-03 10:43:30 [31merror[39m [31mFailed to verify Nutritionix API connection:[39m
+{
+  "service": "meal-generator",
+  "error": "Request failed with status code 401",
+  "status": 401
+}
+2025-06-03 10:43:30 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:apple"
+}
+2025-06-03 10:43:30 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:43:30 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:mixed greens"
+}
+2025-06-03 10:43:31 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cherry tomatoes"
+}
+2025-06-03 10:43:31 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cucumber"
+}
+2025-06-03 10:43:31 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:olive oil"
+}
+2025-06-03 10:43:34 [31merror[39m [31mError storing data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:apple"
+}
+2025-06-03 10:43:34 [31merror[39m [31mError in getMealNutritionData:[39m
+{
+  "service": "meal-generator",
+  "meal": "apple",
+  "error": "relation \"nutrition_data\" does not exist"
+}
+2025-06-03 10:43:34 [31merror[39m [31mBoth Nutritionix and FatSecret API connections failed:[39m
+{
+  "service": "meal-generator",
+  "nutritionixError": "Request failed with status code 401",
+  "fatSecretError": "FatSecret API test returned no data"
+}
+2025-06-03 10:43:34 [31merror[39m [31mFailed to verify Nutritionix API connection:[39m
+{
+  "service": "meal-generator",
+  "error": "All nutrition API services are unavailable"
+}
+2025-06-03 10:43:34 [31merror[39m [31mError storing data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:43:34 [31merror[39m [31mError in getMealNutritionData:[39m
+{
+  "service": "meal-generator",
+  "meal": "Grilled Chicken Salad",
+  "error": "relation \"nutrition_data\" does not exist"
+}
+2025-06-03 10:43:34 [31merror[39m [31mFatSecret API verification failed:[39m
+{
+  "error": "Cannot read properties of undefined (reading 'calories')"
+}
+2025-06-03 10:43:34 [31merror[39m [31mFatSecret API verification failed. Some features may not work correctly.[39m
+2025-06-03 10:43:54 [31merror[39m [31mFailed to verify Nutritionix API connection:[39m
+{
+  "service": "meal-generator",
+  "error": "Request failed with status code 401",
+  "status": 401
+}
+2025-06-03 10:43:55 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:apple"
+}
+2025-06-03 10:43:55 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:43:55 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:mixed greens"
+}
+2025-06-03 10:43:55 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cherry tomatoes"
+}
+2025-06-03 10:43:55 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cucumber"
+}
+2025-06-03 10:43:55 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:olive oil"
+}
+2025-06-03 10:43:58 [31merror[39m [31mError storing data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:apple"
+}
+2025-06-03 10:43:58 [31merror[39m [31mError in getMealNutritionData:[39m
+{
+  "service": "meal-generator",
+  "meal": "apple",
+  "error": "relation \"nutrition_data\" does not exist"
+}
+2025-06-03 10:43:58 [31merror[39m [31mBoth Nutritionix and FatSecret API connections failed:[39m
+{
+  "service": "meal-generator",
+  "nutritionixError": "Request failed with status code 401",
+  "fatSecretError": "FatSecret API test returned no data"
+}
+2025-06-03 10:43:58 [31merror[39m [31mFailed to verify Nutritionix API connection:[39m
+{
+  "service": "meal-generator",
+  "error": "All nutrition API services are unavailable"
+}
+2025-06-03 10:43:59 [31merror[39m [31mError storing data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:43:59 [31merror[39m [31mError in getMealNutritionData:[39m
+{
+  "service": "meal-generator",
+  "meal": "Grilled Chicken Salad",
+  "error": "relation \"nutrition_data\" does not exist"
+}
+2025-06-03 10:43:59 [31merror[39m [31mFatSecret API verification failed:[39m
+{
+  "error": "Cannot read properties of undefined (reading 'calories')"
+}
+2025-06-03 10:43:59 [31merror[39m [31mFatSecret API verification failed. Some features may not work correctly.[39m
+2025-06-03 10:44:42 [31merror[39m [31mFailed to verify Nutritionix API connection:[39m
+{
+  "service": "meal-generator",
+  "error": "Request failed with status code 401",
+  "status": 401
+}
+2025-06-03 10:44:43 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:apple"
+}
+2025-06-03 10:44:43 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:44:43 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:mixed greens"
+}
+2025-06-03 10:44:43 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cherry tomatoes"
+}
+2025-06-03 10:44:44 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:cucumber"
+}
+2025-06-03 10:44:44 [31merror[39m [31mError retrieving data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:olive oil"
+}
+2025-06-03 10:44:47 [31merror[39m [31mError storing data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:apple"
+}
+2025-06-03 10:44:47 [31merror[39m [31mError in getMealNutritionData:[39m
+{
+  "service": "meal-generator",
+  "meal": "apple",
+  "error": "relation \"nutrition_data\" does not exist"
+}
+2025-06-03 10:44:47 [31merror[39m [31mBoth Nutritionix and FatSecret API connections failed:[39m
+{
+  "service": "meal-generator",
+  "nutritionixError": "Request failed with status code 401",
+  "fatSecretError": "FatSecret API test returned no data"
+}
+2025-06-03 10:44:47 [31merror[39m [31mFailed to verify Nutritionix API connection:[39m
+{
+  "service": "meal-generator",
+  "error": "All nutrition API services are unavailable"
+}
+2025-06-03 10:44:47 [31merror[39m [31mError storing data:[39m
+{
+  "error": "relation \"nutrition_data\" does not exist",
+  "key": "meal-generatornutrition:chicken breast"
+}
+2025-06-03 10:44:47 [31merror[39m [31mError in getMealNutritionData:[39m
+{
+  "service": "meal-generator",
+  "meal": "Grilled Chicken Salad",
+  "error": "relation \"nutrition_data\" does not exist"
+}
+2025-06-03 10:44:47 [31merror[39m [31mFatSecret API verification failed: No nutrition data received[39m
+2025-06-03 10:44:47 [31merror[39m [31mFatSecret API verification failed. Some features may not work correctly.[39m
+2025-06-03 10:45:23 [31merror[39m [31mFailed to verify Nutritionix API connection:[39m
+{
+  "service": "meal-generator",
+  "error": "Request failed with status code 401",
+  "status": 401
+}
+2025-06-03 11:00:16 [31merror[39m [31mFailed to verify Nutritionix API connection:[39m
+{
+  "service": "meal-generator",
+  "error": "Request failed with status code 401",
+  "status": 401
+}
